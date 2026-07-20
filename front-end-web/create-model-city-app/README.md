@@ -34,6 +34,10 @@ Options:
 
 - [Model City platform repository](https://github.com/UnirCs/model-city) — architecture, the rest of the release train and the platform packages this archetype wires in.
 
+## Author
+
+Created and maintained by [Jesús Pérez Melero](https://www.linkedin.com/in/jesusperezmelero/), author of the Model City platform.
+
 ## License
 
 MIT — see [LICENSE](./LICENSE).
