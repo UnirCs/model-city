@@ -1,12 +1,13 @@
 /* Fonts are loaded via Next.js Font (Public Sans) and <link> in layout (Material Symbols) */
 @import "tailwindcss";
 
-/* Scan core's own components for class names — they live outside the app's
-   src/, so Tailwind's automatic content detection must be told. The enabled
-   feature modules' component sources are added by the generated Tailwind
-   manifest (`src/styles/modules.css`, emitted by `modelcity gen`), which
-   imports this file. */
-@source "../components";
+/* No `@source` here: this stylesheet owns the Tailwind import and the design
+   tokens, but content scanning is driven entirely by the generated manifest
+   (`src/styles/modules.css`, emitted by `modelcity gen`), which imports this
+   file and adds one `@source` per class-bearing directory of every module —
+   components AND route pages. Declaring sources here as well would miss the
+   route files (where custom utilities like `text-h1` are used) and double-scan
+   what the manifest already covers. */
 
 /* Dark mode enabled via .dark class on the html element */
 @custom-variant dark (&:where(.dark, .dark *));

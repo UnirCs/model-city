@@ -1,6 +1,6 @@
 {
   "name": "@modelcity/mobility",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Mobility feature module: citizen stays/cars and staff ticket/sanction operations.",
   "license": "MIT",
   "repository": {
@@ -15,7 +15,7 @@
     "**/*.css"
   ],
   "dependencies": {
-    "@modelcity/core": "1.0.2"
+    "@modelcity/core": "1.0.3"
   },
   "peerDependencies": {
     "next": "^16.2.6",
