@@ -30,6 +30,10 @@ Options:
   setup, Dockerfile, `.env.example`).
 - An empty `overrides/` directory documenting the extension mechanism.
 
+## Links
+
+- [Model City platform repository](https://github.com/UnirCs/model-city) — architecture, the rest of the release train and the platform packages this archetype wires in.
+
 ## License
 
 MIT — see [LICENSE](./LICENSE).

@@ -24,6 +24,10 @@ City projects are expected to be scaffolded with `npm create model-city-app`,
 which wires this package, the feature modules, the `modelcity` codegen CLI and
 the per-city override mechanism together.
 
+## Links
+
+- [Model City platform repository](https://github.com/UnirCs/model-city) — architecture, the rest of the release train and the `create-model-city-app` archetype.
+
 ## License
 
 MIT — see [LICENSE](./LICENSE).

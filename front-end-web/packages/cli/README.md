@@ -34,6 +34,10 @@ Part of the Model City release train — install every `@modelcity/*` package at
 the **same version**. City projects scaffolded with `npm create model-city-app`
 get all of this wiring out of the box.
 
+## Links
+
+- [Model City platform repository](https://github.com/UnirCs/model-city) — architecture, the rest of the release train and the `create-model-city-app` archetype.
+
 ## License
 
 MIT — see [LICENSE](./LICENSE).
