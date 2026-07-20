@@ -1,0 +1,36 @@
+{
+  "home": {
+    "welcome": "Hi",
+    "subtitle": "Access all municipal services, stay informed about cultural life and manage your transactions from a single place.",
+    "servicesTitle": "Municipal Services",
+    "noticeTitle": "Featured Municipal Notice",
+    "noticeMessage": "Traffic closure on Calle de la Reina due to road improvement works. Expected until Friday the 24th. Check alternative routes on the municipal website.",
+    "noticeLink": "View all notices",
+    "services": {
+      "eventos": {
+        "title": "Cultural Events",
+        "description": "Discover Aranjuez's cultural agenda. Theatre, concerts, exhibitions and activities for all audiences."
+      },
+      "turismo": {
+        "title": "Tourism Guides",
+        "description": "Explore the World Heritage Site. Suggested routes, historic monuments and emblematic gardens."
+      },
+      "participacion": {
+        "title": "Citizen Participation",
+        "description": "Your voice counts. Report incidents, take part in surveys and check participatory budgets."
+      },
+      "seguridad": {
+        "title": "Public Safety",
+        "description": "Local alerts, local police contact information and civil protection recommendations."
+      },
+      "reservas": {
+        "title": "Space Booking",
+        "description": "Manage your bookings for sports facilities, library rooms and community centres."
+      },
+      "movilidad": {
+        "title": "Mobility",
+        "description": "Book your parking spot in the regulated parking zone."
+      }
+    }
+  }
+}

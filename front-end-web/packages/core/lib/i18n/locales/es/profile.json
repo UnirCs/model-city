@@ -1,0 +1,14 @@
+{
+  "profile": {
+    "title": "Datos Personales",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "since": "Registrado desde",
+    "neighbourhood": "Barrio de residencia",
+    "edit": "Editar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "logout": "Cerrar sesión",
+    "backendError": "No se pudieron cargar los datos del perfil desde el servidor. Mostrando información básica de tu cuenta."
+  }
+}

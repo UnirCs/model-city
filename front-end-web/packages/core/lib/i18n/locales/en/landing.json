@@ -1,0 +1,46 @@
+{
+  "landing": {
+    "banner": {
+      "badge": "Aranjuez · UNESCO World Heritage",
+      "title": "Aranjuez, in one click",
+      "subtitle": "The Aranjuez Citizen Portal brings together the cultural agenda, municipal services and citizen participation in a single digital space. Transactions, bookings, alerts and much more, available 24 hours a day from any device.",
+      "cta": "Access the portal",
+      "fnmtNote": "Plus, if you hold a valid personal certificate issued by the FNMT, you can also take part in civic consultations."
+    },
+    "services": {
+      "title": "What can you do?",
+      "s1label": "Cultural events",
+      "s1desc": "Agenda, theatre, concerts and activities",
+      "s2label": "Tourism guides",
+      "s2desc": "Routes and monuments of the World Heritage site",
+      "s3label": "Citizen participation",
+      "s3desc": "Consultations and neighbourhood surveys",
+      "s4label": "Notices & alerts",
+      "s4desc": "Incidents and real-time safety updates",
+      "s5label": "Public spaces",
+      "s5desc": "Sports facilities and bookings",
+      "s6label": "Urban mobility",
+      "s6desc": "Public parking and parking management"
+    },
+    "footer": {
+      "address": "Plaza de la Constitución, 1 · 28300 Aranjuez, Madrid",
+      "seat": "Electronic Office",
+      "legal": "Legal Notice",
+      "cookies": "Cookie Policy",
+      "accessibility": "Accessibility",
+      "contact": "Contact",
+      "glossary": "Glossary",
+      "footerNav": "Footer",
+      "poweredBy": "Built with ModelCity, open source technology for smart-city software platforms.",
+      "poweredByLinkLabel": "ModelCity on GitHub"
+    },
+    "easyRead": {
+      "title": "Easy read",
+      "intro": "This is what you can do on this portal, explained with simple words:",
+      "p1": "Aranjuez has a website for its residents and visitors.",
+      "p2": "Here you can see events, tourist routes, alerts, book facilities and manage your car.",
+      "p3": "To use it, click the «Access the portal» button and sign in with your account.",
+      "p4": "If you need help, open the Help page from the top menu once you have signed in."
+    }
+  }
+}

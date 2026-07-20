@@ -1,0 +1,26 @@
+{
+  "registration": {
+    "brand": "Mairie d'Aranjuez",
+    "heading": "Complétez votre inscription",
+    "subtitle": "Avant d'accéder au portail, nous avons besoin de quelques informations supplémentaires pour vous identifier en tant que résident de la municipalité.",
+    "emailLabel": "Adresse e-mail",
+    "emailHint": "Obtenu depuis votre compte d'accès. Ne peut pas être modifié.",
+    "nameLabel": "Nom",
+    "nameHint": "C'est ainsi que nous vous reconnaîtrons sur le portail. Vous pourrez le modifier depuis votre profil.",
+    "namePlaceholder": "Nom et prénoms",
+    "neighbourhoodLabel": "Quartier de résidence",
+    "neighbourhoodHint": "Sélectionnez le quartier où vous habitez. Vous pourrez le modifier depuis votre profil.",
+    "neighbourhoodPlaceholder": "Sélectionnez un quartier…",
+    "submit": "Compléter l'inscription",
+    "submitting": "Inscription en cours…",
+    "back": "Retour",
+    "privacy": "Vos données seront traitées conformément au",
+    "gdpr": "Règlement Général sur la Protection des Données (RGPD)",
+    "privacyEnd": "et à la réglementation municipale applicable.",
+    "errors": {
+      "nameRequired": "Le nom est obligatoire.",
+      "neighbourhoodRequired": "Veuillez sélectionner un quartier.",
+      "serverError": "Impossible de se connecter au serveur. Veuillez réessayer dans quelques minutes."
+    }
+  }
+}

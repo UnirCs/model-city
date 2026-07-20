@@ -1,0 +1,46 @@
+{
+  "landing": {
+    "banner": {
+      "badge": "Aranjuez · Patrimonio de la Humanidad UNESCO",
+      "title": "Aranjuez, en un clic",
+      "subtitle": "El Portal Ciudadano de Aranjuez centraliza la agenda cultural, los servicios municipales y la participación ciudadana en un único espacio digital. Trámites, reservas, alertas y mucho más, disponibles las 24 horas desde cualquier dispositivo.",
+      "cta": "Acceder al portal",
+      "fnmtNote": "Además, si tienes un certificado personal emitido por la FNMT en vigor, podrás participar en encuestas ciudadanas."
+    },
+    "services": {
+      "title": "¿Qué puedes hacer?",
+      "s1label": "Eventos culturales",
+      "s1desc": "Agenda, teatro, conciertos y actividades",
+      "s2label": "Guías de turismo",
+      "s2desc": "Rutas y monumentos del Patrimonio Mundial",
+      "s3label": "Participación ciudadana",
+      "s3desc": "Consultas y encuestas vecinales",
+      "s4label": "Avisos y alertas",
+      "s4desc": "Incidencias y seguridad en tiempo real",
+      "s5label": "Espacios públicos",
+      "s5desc": "Instalaciones deportivas y reservas",
+      "s6label": "Movilidad urbana",
+      "s6desc": "Parking público y gestión de aparcamiento"
+    },
+    "footer": {
+      "address": "Plaza de la Constitución, 1 · 28300 Aranjuez, Madrid",
+      "seat": "Sede Electrónica",
+      "legal": "Aviso Legal",
+      "cookies": "Política de Cookies",
+      "accessibility": "Accesibilidad",
+      "contact": "Contacto",
+      "glossary": "Glosario",
+      "footerNav": "Pie de página",
+      "poweredBy": "Construida con ModelCity, tecnología open source para plataformas software de ciudades inteligentes.",
+      "poweredByLinkLabel": "ModelCity en GitHub"
+    },
+    "easyRead": {
+      "title": "Lectura fácil",
+      "intro": "Esto es lo que puedes hacer en este portal, explicado con palabras sencillas:",
+      "p1": "Aranjuez tiene una página web para sus vecinos y visitantes.",
+      "p2": "Aquí puedes ver eventos, rutas turísticas, alertas, reservar instalaciones y gestionar tu coche.",
+      "p3": "Para usarla, pulsa el botón «Acceder al portal» y entra con tu cuenta.",
+      "p4": "Si necesitas ayuda, abre la página de Ayuda desde el menú superior una vez hayas entrado."
+    }
+  }
+}

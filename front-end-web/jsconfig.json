@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@modelcity/core/*": ["./overrides/core/*", "./packages/core/*"],
+      "@modelcity/leisure/*": ["./overrides/leisure/*", "./packages/leisure/*"],
+      "@modelcity/engagement/*": ["./overrides/engagement/*", "./packages/engagement/*"],
+      "@modelcity/mobility/*": ["./overrides/mobility/*", "./packages/mobility/*"]
+    },
+    "jsx": "react"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "security": {
+    "alertCenter": {
+      "bannerTitle": "Centro de Alertas",
+      "bannerSubtitle": "Información actualizada sobre incidencias y avisos de seguridad en el municipio de Aranjuez.",
+      "mapTitle": "Mapa de incidencias",
+      "expandMap": "Ampliar mapa",
+      "closeMap": "Cerrar mapa",
+      "listTitle": "Alertas activas",
+      "totals": "{count} totales",
+      "page": "Página",
+      "of": "de",
+      "prev": "Anterior",
+      "next": "Siguiente",
+            "loadError": "No se pudieron cargar las alertas. Por favor, inténtelo más tarde.",
+            "noResults": "No hay alertas activas en este momento.",
+            "createNew": "Crear nueva alerta",
+            "createNewHint": "Publica un nuevo aviso de seguridad",
+      "zoneLabel": "Zona",
+      "neighbourhoodLabel": "Barrio",
+      "createdAtLabel": "Creada",
+      "unknownZone": "Zona desconocida",
+      "unknownNeighbourhood": "Barrio desconocido",
+      "wholeZone": "Toda la zona",
+      "closeModal": "Cerrar",
+      "viewMore": "ver más"
+    },
+    "severity": {
+      "IMPORTANT": "Importante",
+      "MEDIUM": "Moderada",
+      "MILD": "Leve"
+    },
+    "manage": {
+      "bannerTitle": "Gestión de alertas",
+      "bannerSubtitle": "Revisa, consulta y elimina las alertas de seguridad publicadas en la plataforma.",
+      "tableTitle": "Registro de alertas",
+      "colId": "ID",
+      "colSeverity": "Severidad",
+      "colTitle": "Título",
+      "colArea": "Zona / Barrio",
+      "colExpires": "Expira",
+      "colActions": "Acciones",
+      "viewDetails": "Ver detalles",
+      "deleteAlert": "Eliminar",
+      "deleteConfirmTitle": "Eliminar alerta",
+      "deleteConfirmBody": "¿Seguro que quieres eliminar esta alerta? Esta acción no se puede deshacer.",
+      "deleteConfirm": "Eliminar",
+      "deleteCancel": "Cancelar",
+      "deleting": "Eliminando…",
+      "deleteError": "No se pudo eliminar la alerta. Inténtalo de nuevo.",
+      "loadError": "No se pudieron cargar las alertas.",
+      "noResults": "No hay alertas registradas.",
+      "modalTitle": "Detalle de alerta",
+      "modalClose": "Cerrar",
+      "modalSeverity": "Severidad",
+      "modalAlertTitle": "Título",
+      "modalDescription": "Descripción",
+      "modalZone": "Zona",
+      "modalNeighbourhood": "Barrio",
+      "modalCoordinates": "Coordenadas",
+      "modalCreatedAt": "Creada",
+      "modalExpiresAt": "Expira"
+    },
+    "alertForm": {
+      "back": "Volver",
+      "pageTitleCreate": "Crear nueva alerta",
+      "pageSubtitleCreate": "Publica un aviso de seguridad georreferenciado para la ciudadanía.",
+      "severityLabel": "Severidad",
+      "severityPlaceholder": "Selecciona una severidad…",
+      "titleLabel": "Título",
+      "titlePlaceholder": "Resumen breve de la incidencia",
+      "descriptionLabel": "Descripción",
+      "descriptionPlaceholder": "Describe la incidencia, qué se debe evitar y, si es posible, una alternativa.",
+      "zoneLabel": "Zona",
+      "zonePlaceholder": "Selecciona una zona…",
+      "neighbourhoodLabel": "Barrio (opcional)",
+      "neighbourhoodPlaceholder": "Selecciona un barrio…",
+      "neighbourhoodAll": "Toda la zona",
+      "expiresAtLabel": "Fecha de expiración",
+      "expiresAtHint": "La alerta dejará de mostrarse al final del día seleccionado.",
+      "mapPickerTitle": "Selector de ubicación",
+      "coordinatesHint": "Haz clic en el mapa para fijar la ubicación. Las coordenadas se actualizarán automáticamente.",
+      "submitCreate": "Crear alerta",
+      "submitting": "Guardando…",
+      "cancel": "Cancelar",
+      "errors": {
+        "severityRequired": "Selecciona una severidad.",
+        "titleRequired": "El título es obligatorio.",
+        "descriptionRequired": "La descripción es obligatoria.",
+        "zoneRequired": "Selecciona una zona.",
+        "latitudeRequired": "Selecciona una ubicación en el mapa.",
+        "longitudeRequired": "Selecciona una ubicación en el mapa.",
+        "expiresAtRequired": "Selecciona una fecha de expiración.",
+        "expiresAtPast": "La fecha de expiración debe ser futura.",
+        "serverError": "No se pudo crear la alerta. Inténtalo de nuevo."
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+{
+  "participation": {
+    "questions": {
+      "bannerTitle": "Explorador de Consultas",
+      "bannerSubtitle": "Tu voz construye el futuro de Aranjuez. Participa en las decisiones que afectan a tu barrio y a nuestra ciudad patrimonio.",
+      "sectionActive": "Consultas Activas",
+      "sectionUpcoming": "Próximas Consultas",
+      "sectionFinished": "Consultas Finalizadas",
+      "participate": "Participar",
+      "viewDetails": "Ver detalles",
+      "closes": "Cierra",
+      "opens": "Abre",
+      "closedOn": "Finalizada el",
+      "statusActive": "Activa",
+      "statusUpcoming": "Próximamente",
+      "statusFinished": "Finalizada",
+      "page": "Página",
+      "of": "de",
+      "prev": "Anterior",
+      "next": "Siguiente",
+            "noResults": "No hay consultas disponibles.",
+            "loadError": "No se pudieron cargar las consultas. Por favor, inténtelo más tarde.",
+            "createNew": "Crear nueva encuesta",
+            "createNewHint": "Publica una nueva consulta ciudadana"
+    },
+    "questionDetail": {
+      "back": "Volver",
+      "statusActive": "Consulta Activa",
+      "statusFuture": "Próximamente",
+      "statusPast": "Finalizada",
+      "descriptionTitle": "Descripción Detallada",
+      "objectivesTitle": "Objetivos de la Propuesta",
+      "openPeriod": "Periodo de consulta:",
+      "to": "al",
+      "opensOn": "Abre el",
+      "closedOn": "Cerrada el",
+      "vote": {
+        "title": "¿Cuál es tu posición?",
+        "subtitle": "Tu voto es vinculante para la toma de decisión",
+        "yes": "A favor",
+        "no": "En contra",
+        "confirm": "Confirmar voto",
+        "registered": "¡Voto registrado!",
+        "notActive": "La votación no está abierta en este momento.",
+        "alreadyVoted": "Ya has participado en esta consulta. Gracias por tu voto.",
+        "verifyingCert": "Verificando certificado digital…",
+        "voteError": "La operación debe realizarse en otro momento. Por favor, inténtelo más tarde.",
+        "duplicateVote": "Ya se ha registrado un voto asociado a la persona física identificada en el certificado digital."
+      },
+      "stats": {
+        "title": "Participación",
+        "total": "Votos emitidos",
+        "inFavor": "A favor",
+        "against": "En contra"
+      },
+      "threshold": {
+        "title": "Umbral de validación",
+        "description": "Para ser tomada en cuenta, esta consulta debe alcanzar las 10.000 respuestas.",
+        "target": "10.000 respuestas requeridas"
+      },
+      "loadError": "No se pudo cargar la consulta. Por favor, inténtelo más tarde.",
+      "notFound": "Consulta no encontrada.",
+      "citizenOnly": {
+        "title": "Acción exclusiva de ciudadanos",
+        "message": "Esta acción está restringida a ciudadanos. Ingrese en la plataforma con su cuenta de ciudadano para poder realizar la acción."
+      },
+      "adminActions": {
+        "sectionTitle": "Administración",
+        "startSurvey": "Iniciar encuesta",
+        "closeSurvey": "Cerrar encuesta",
+        "actionError": "No se pudo realizar la operación. Inténtelo de nuevo."
+      },
+      "editQuestion": {
+        "buttonLabel": "Editar consulta",
+        "title": "Editar consulta",
+        "close": "Cerrar",
+        "titleLabel": "Título",
+        "titlePlaceholder": "Título de la consulta",
+        "descriptionLabel": "Descripción",
+        "descriptionPlaceholder": "Descripción detallada de la consulta",
+        "imageUrlLabel": "URL de imagen",
+        "imageUrlPlaceholder": "https://…",
+        "openDateLabel": "Fecha de inicio",
+        "closeDateLabel": "Fecha de fin",
+        "zoneLabel": "Zona",
+        "neighbourhoodLabel": "Barrio",
+        "neighbourhoodPlaceholder": "Selecciona un barrio…",
+        "objectivesLabel": "Objetivos de la propuesta",
+        "addObjective": "Añadir objetivo",
+        "objectivePlaceholder": "Objetivo",
+        "removeObjective": "Eliminar objetivo",
+        "save": "Guardar cambios",
+        "saving": "Guardando…",
+        "cancel": "Cancelar",
+        "errors": {
+          "titleRequired": "El título es obligatorio.",
+          "descriptionRequired": "La descripción es obligatoria.",
+          "openDateRequired": "La fecha de inicio es obligatoria.",
+          "closeDateRequired": "La fecha de fin es obligatoria.",
+          "dateOrder": "La fecha de fin debe ser posterior a la de inicio.",
+          "openDateTooSoon": "La fecha de apertura debe ser al menos 3 días posterior a hoy.",
+          "neighbourhoodRequired": "Selecciona un barrio.",
+          "serverError": "No se pudo guardar la consulta. Inténtelo de nuevo."
+        }
+      }
+    },
+    "createQuestion": {
+      "back": "Volver",
+      "pageTitle": "Crear nueva consulta",
+      "pageSubtitle": "Completa el formulario para publicar una nueva consulta ciudadana.",
+      "titleLabel": "Título",
+      "titlePlaceholder": "Título de la consulta",
+      "descriptionLabel": "Descripción",
+      "descriptionPlaceholder": "Descripción detallada de la consulta",
+      "imageUrlLabel": "URL de imagen",
+      "imageUrlHint": "Opcional. URL de la imagen de portada de la consulta.",
+      "imageUrlPlaceholder": "https://…",
+      "openDateLabel": "Fecha de inicio",
+      "closeDateLabel": "Fecha de fin",
+      "zoneLabel": "Zona",
+      "neighbourhoodLabel": "Barrio",
+      "neighbourhoodPlaceholder": "Selecciona un barrio…",
+      "objectivesLabel": "Objetivos de la propuesta",
+      "addObjective": "Añadir objetivo",
+      "objectivePlaceholder": "Objetivo",
+      "removeObjective": "Eliminar objetivo",
+      "submit": "Crear consulta",
+      "submitting": "Creando…",
+      "cancel": "Cancelar",
+      "errors": {
+        "titleRequired": "El título es obligatorio.",
+        "descriptionRequired": "La descripción es obligatoria.",
+        "openDateRequired": "La fecha de inicio es obligatoria.",
+        "closeDateRequired": "La fecha de fin es obligatoria.",
+        "dateOrder": "La fecha de fin debe ser posterior a la de inicio.",
+        "openDateTooSoon": "La fecha de apertura debe ser al menos 3 días posterior a hoy.",
+        "neighbourhoodRequired": "Selecciona un barrio.",
+        "serverError": "No se pudo crear la consulta. Inténtelo de nuevo."
+      }
+    }
+  }
+}

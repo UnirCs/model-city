@@ -1,0 +1,31 @@
+{
+  "help": {
+    "pageTitle": "Help",
+    "pageSubtitle": "Find answers to frequently asked questions and available contact channels.",
+    "contactTitle": "Contact",
+    "contactBody": "If you cannot find the answer you are looking for, you can reach us through the following channels.",
+    "emailLabel": "Email",
+    "emailValue": "help@modelcity.es",
+    "phoneLabel": "Citizen helpline",
+    "phoneValue": "900 100 200",
+    "scheduleLabel": "Opening hours",
+    "scheduleValue": "Monday to Friday, 9:00 – 18:00",
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "How can I view my traffic sanctions?",
+        "a": "Go to the «Mobility» section and select «My sanctions»."
+      }
+    ],
+    "glossaryLinkLabel": "View glossary of terms",
+    "easyRead": {
+      "title": "Easy read",
+      "intro": "This is what you can do on the Help page:",
+      "p1": "If you have a question, first look in the frequently asked questions.",
+      "p2": "If you cannot find the answer, you can write to the email or call the phone number shown above.",
+      "p3": "We answer by phone from Monday to Friday, from 9 am to 6 pm.",
+      "p4": "You can also read the glossary to understand technical words."
+    }
+  }
+}
+

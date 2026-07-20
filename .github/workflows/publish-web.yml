@@ -1,0 +1,54 @@
+# Publishes the front-end release train (`@modelcity/*` + create-model-city-app)
+# to the npm registry when a `web-v*` tag is pushed.
+#
+# Prerequisites:
+#   - The `NPM_TOKEN` repository secret: a granular npm access token with
+#     publish permission on the @modelcity scope (and create-model-city-app).
+#   - Versions bumped beforehand with `node scripts/release.mjs <version>`
+#     (run from front-end-web/), which the tag-consistency step enforces.
+name: publish-web
+
+on:
+  push:
+    tags:
+      - 'web-v*'
+
+permissions:
+  contents: read
+  id-token: write # npm --provenance attestation
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: front-end-web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Check the tag matches the release-train version
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#web-v}"
+          PKG_VERSION="$(node -p "require('./packages/core/package.json').version")"
+          if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
+            echo "Tag web-v$TAG_VERSION does not match package version $PKG_VERSION" >&2
+            exit 1
+          fi
+
+      # The lockfile is intentionally not committed, hence npm install (not ci).
+      - run: npm install --no-audit --no-fund
+
+      - run: npm run gen:modules
+
+      # Quality gate: the reference app must build with the packages about to ship.
+      - run: npm run build
+
+      - name: Publish the release train (with npm provenance)
+        run: npm publish --workspaces --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,0 +1,31 @@
+{
+  "help": {
+    "pageTitle": "Ayuda",
+    "pageSubtitle": "Encuentra respuestas a las preguntas más frecuentes y los canales de contacto disponibles.",
+    "contactTitle": "Contacto",
+    "contactBody": "Si no encuentras la respuesta que buscas, puedes ponerte en contacto con nosotros a través de los siguientes canales.",
+    "emailLabel": "Correo electrónico",
+    "emailValue": "ayuda@modelcity.es",
+    "phoneLabel": "Teléfono de atención ciudadana",
+    "phoneValue": "900 100 200",
+    "scheduleLabel": "Horario de atención",
+    "scheduleValue": "Lunes a viernes, de 9:00 a 18:00",
+    "faqTitle": "Preguntas frecuentes",
+    "faq": [
+      {
+        "q": "¿Cómo puedo consultar mis sanciones de tráfico?",
+        "a": "Accede a la sección «Movilidad» y selecciona «Mis sanciones»."
+      }
+    ],
+    "glossaryLinkLabel": "Ver glosario de términos",
+    "easyRead": {
+      "title": "Lectura fácil",
+      "intro": "Esto es lo que puedes hacer en la página de Ayuda:",
+      "p1": "Si tienes una duda, busca primero en las preguntas frecuentes.",
+      "p2": "Si no encuentras la respuesta, puedes escribir al correo o llamar al teléfono que aparecen arriba.",
+      "p3": "Atendemos por teléfono de lunes a viernes, de 9 a 6 de la tarde.",
+      "p4": "También puedes consultar el glosario para entender las palabras técnicas."
+    }
+  }
+}
+

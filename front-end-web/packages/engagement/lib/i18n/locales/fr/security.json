@@ -1,0 +1,106 @@
+{
+  "security": {
+    "alertCenter": {
+      "bannerTitle": "Centre d'alertes",
+      "bannerSubtitle": "Informations à jour sur les incidents et les avis de sécurité dans la commune d'Aranjuez.",
+      "mapTitle": "Carte des incidents",
+      "expandMap": "Agrandir la carte",
+      "closeMap": "Fermer la carte",
+      "listTitle": "Alertes actives",
+      "totals": "{count} au total",
+      "page": "Page",
+      "of": "de",
+      "prev": "Précédent",
+      "next": "Suivant",
+      "loadError": "Impossible de charger les alertes. Veuillez réessayer plus tard.",
+      "noResults": "Aucune alerte active pour le moment.",
+      "createNew": "Créer une nouvelle alerte",
+      "createNewHint": "Publier un nouvel avis de sécurité",
+      "zoneLabel": "Zone",
+      "neighbourhoodLabel": "Quartier",
+      "createdAtLabel": "Créée",
+      "unknownZone": "Zone inconnue",
+      "unknownNeighbourhood": "Quartier inconnu",
+      "wholeZone": "Toute la zone",
+      "closeModal": "Fermer",
+      "viewMore": "voir plus"
+    },
+    "severity": {
+      "IMPORTANT": "Importante",
+      "MEDIUM": "Modérée",
+      "MILD": "Légère"
+    },
+    "manage": {
+      "bannerTitle": "Gestion des alertes",
+      "bannerSubtitle": "Consultez, inspectez et supprimez les alertes de sécurité publiées sur la plateforme.",
+      "tableTitle": "Journal des alertes",
+      "colId": "ID",
+      "colSeverity": "Gravité",
+      "colTitle": "Titre",
+      "colArea": "Zone / Quartier",
+      "colExpires": "Expire",
+      "colActions": "Actions",
+      "viewDetails": "Voir les détails",
+      "deleteAlert": "Supprimer",
+      "deleteConfirmTitle": "Supprimer l'alerte",
+      "deleteConfirmBody": "Êtes-vous sûr de vouloir supprimer cette alerte ? Cette action est irréversible.",
+      "deleteConfirm": "Supprimer",
+      "deleteCancel": "Annuler",
+      "deleting": "Suppression…",
+      "deleteError": "Impossible de supprimer l'alerte. Veuillez réessayer.",
+      "loadError": "Impossible de charger les alertes.",
+      "noResults": "Aucune alerte enregistrée.",
+      "modalTitle": "Détail de l'alerte",
+      "modalClose": "Fermer",
+      "modalSeverity": "Gravité",
+      "modalAlertTitle": "Titre",
+      "modalDescription": "Description",
+      "modalZone": "Zone",
+      "modalNeighbourhood": "Quartier",
+      "modalCoordinates": "Coordonnées",
+      "modalCreatedAt": "Créée",
+      "modalExpiresAt": "Expire"
+    },
+    "alertForm": {
+      "back": "Retour",
+      "pageTitleCreate": "Créer une nouvelle alerte",
+      "pageSubtitleCreate": "Publiez un avis de sécurité géolocalisé à destination des citoyens.",
+      "severityLabel": "Gravité",
+      "severityPlaceholder": "Sélectionnez une gravité…",
+      "titleLabel": "Titre",
+      "titlePlaceholder": "Bref résumé de l'incident",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "Décrivez l'incident, ce qu'il faut éviter et, si possible, une alternative.",
+      "zoneLabel": "Zone",
+      "zonePlaceholder": "Sélectionnez une zone…",
+      "neighbourhoodLabel": "Quartier (facultatif)",
+      "neighbourhoodPlaceholder": "Sélectionnez un quartier…",
+      "neighbourhoodAll": "Toute la zone",
+      "expiresAtLabel": "Date d'expiration",
+      "expiresAtHint": "L'alerte cessera d'être affichée à la fin de la journée choisie.",
+      "mapPickerTitle": "Sélecteur d'emplacement",
+      "coordinatesHint": "Cliquez sur la carte pour fixer l'emplacement. Les coordonnées seront mises à jour automatiquement.",
+      "submitCreate": "Créer l'alerte",
+      "submitting": "Enregistrement…",
+      "cancel": "Annuler",
+      "errors": {
+        "severityRequired": "Sélectionnez une gravité.",
+        "titleRequired": "Le titre est obligatoire.",
+        "descriptionRequired": "La description est obligatoire.",
+        "zoneRequired": "Sélectionnez une zone.",
+        "latitudeRequired": "Sélectionnez un emplacement sur la carte.",
+        "longitudeRequired": "Sélectionnez un emplacement sur la carte.",
+        "expiresAtRequired": "Sélectionnez une date d'expiration.",
+        "expiresAtPast": "La date d'expiration doit être future.",
+        "serverError": "Impossible de créer l'alerte. Veuillez réessayer."
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

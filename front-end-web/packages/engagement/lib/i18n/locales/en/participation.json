@@ -1,0 +1,142 @@
+{
+  "participation": {
+    "questions": {
+      "bannerTitle": "Consultation Explorer",
+      "bannerSubtitle": "Your voice builds the future of Aranjuez. Participate in the decisions affecting your neighbourhood and our heritage city.",
+      "sectionActive": "Active Consultations",
+      "sectionUpcoming": "Upcoming Consultations",
+      "sectionFinished": "Finished Consultations",
+      "participate": "Participate",
+      "viewDetails": "View details",
+      "closes": "Closes",
+      "opens": "Opens",
+      "closedOn": "Closed on",
+      "statusActive": "Active",
+      "statusUpcoming": "Upcoming",
+      "statusFinished": "Finished",
+      "page": "Page",
+      "of": "of",
+      "prev": "Previous",
+      "next": "Next",
+            "noResults": "No consultations available.",
+            "loadError": "Could not load consultations. Please try again later.",
+            "createNew": "Create new survey",
+            "createNewHint": "Publish a new civic consultation"
+    },
+    "questionDetail": {
+      "back": "Go back",
+      "statusActive": "Active Consultation",
+      "statusFuture": "Upcoming",
+      "statusPast": "Finished",
+      "descriptionTitle": "Detailed Description",
+      "objectivesTitle": "Proposal Objectives",
+      "openPeriod": "Consultation period:",
+      "to": "to",
+      "opensOn": "Opens on",
+      "closedOn": "Closed on",
+      "vote": {
+        "title": "What is your position?",
+        "subtitle": "Your vote is binding for the decision",
+        "yes": "In favour",
+        "no": "Against",
+        "confirm": "Confirm vote",
+        "registered": "Vote registered!",
+        "notActive": "Voting is not open at this time.",
+        "alreadyVoted": "You have already participated in this consultation. Thank you for your vote.",
+        "verifyingCert": "Verifying digital certificate…",
+        "voteError": "The operation must be carried out at another time. Please try again later.",
+        "duplicateVote": "A vote has already been registered for the natural person identified in the digital certificate."
+      },
+      "stats": {
+        "title": "Participation",
+        "total": "Votes cast",
+        "inFavor": "In favour",
+        "against": "Against"
+      },
+      "threshold": {
+        "title": "Validation threshold",
+        "description": "To be taken into account, this consultation must reach 10,000 responses.",
+        "target": "10,000 responses required"
+      },
+      "loadError": "Could not load the consultation. Please try again later.",
+      "notFound": "Consultation not found.",
+      "citizenOnly": {
+        "title": "Citizen-only action",
+        "message": "This action is restricted to citizens. Sign in with your citizen account to perform this action."
+      },
+      "adminActions": {
+        "sectionTitle": "Administration",
+        "startSurvey": "Start survey",
+        "closeSurvey": "Close survey",
+        "actionError": "Could not complete the operation. Please try again."
+      },
+      "editQuestion": {
+        "buttonLabel": "Edit consultation",
+        "title": "Edit consultation",
+        "close": "Close",
+        "titleLabel": "Title",
+        "titlePlaceholder": "Consultation title",
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Detailed description of the consultation",
+        "imageUrlLabel": "Image URL",
+        "imageUrlPlaceholder": "https://…",
+        "openDateLabel": "Start date",
+        "closeDateLabel": "End date",
+        "zoneLabel": "Zone",
+        "neighbourhoodLabel": "Neighbourhood",
+        "neighbourhoodPlaceholder": "Select a neighbourhood…",
+        "objectivesLabel": "Proposal objectives",
+        "addObjective": "Add objective",
+        "objectivePlaceholder": "Objective",
+        "removeObjective": "Remove objective",
+        "save": "Save changes",
+        "saving": "Saving…",
+        "cancel": "Cancel",
+        "errors": {
+          "titleRequired": "Title is required.",
+          "descriptionRequired": "Description is required.",
+          "openDateRequired": "Start date is required.",
+          "closeDateRequired": "End date is required.",
+          "dateOrder": "End date must be after start date.",
+          "openDateTooSoon": "The opening date must be at least 3 days from today.",
+          "neighbourhoodRequired": "Please select a neighbourhood.",
+          "serverError": "Could not save the consultation. Please try again."
+        }
+      }
+    },
+    "createQuestion": {
+      "back": "Go back",
+      "pageTitle": "Create new consultation",
+      "pageSubtitle": "Fill in the form to publish a new civic consultation.",
+      "titleLabel": "Title",
+      "titlePlaceholder": "Consultation title",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "Detailed description of the consultation",
+      "imageUrlLabel": "Image URL",
+      "imageUrlHint": "Optional. Cover image URL for the consultation.",
+      "imageUrlPlaceholder": "https://…",
+      "openDateLabel": "Start date",
+      "closeDateLabel": "End date",
+      "zoneLabel": "Zone",
+      "neighbourhoodLabel": "Neighbourhood",
+      "neighbourhoodPlaceholder": "Select a neighbourhood…",
+      "objectivesLabel": "Proposal objectives",
+      "addObjective": "Add objective",
+      "objectivePlaceholder": "Objective",
+      "removeObjective": "Remove objective",
+      "submit": "Create consultation",
+      "submitting": "Creating…",
+      "cancel": "Cancel",
+      "errors": {
+        "titleRequired": "Title is required.",
+        "descriptionRequired": "Description is required.",
+        "openDateRequired": "Start date is required.",
+        "closeDateRequired": "End date is required.",
+        "dateOrder": "End date must be after start date.",
+        "openDateTooSoon": "The opening date must be at least 3 days from today.",
+        "neighbourhoodRequired": "Please select a neighbourhood.",
+        "serverError": "Could not create the consultation. Please try again."
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "security": {
+    "alertCenter": {
+      "bannerTitle": "Alert Centre",
+      "bannerSubtitle": "Up-to-date information about incidents and safety notices across the Aranjuez municipality.",
+      "mapTitle": "Incident map",
+      "expandMap": "Expand map",
+      "closeMap": "Close map",
+      "listTitle": "Active alerts",
+      "totals": "{count} total",
+      "page": "Page",
+      "of": "of",
+      "prev": "Previous",
+      "next": "Next",
+      "loadError": "Could not load the alerts. Please try again later.",
+      "noResults": "There are no active alerts right now.",
+      "createNew": "Create new alert",
+      "createNewHint": "Publish a new safety notice",
+      "zoneLabel": "Zone",
+      "neighbourhoodLabel": "Neighbourhood",
+      "createdAtLabel": "Created",
+      "unknownZone": "Unknown zone",
+      "unknownNeighbourhood": "Unknown neighbourhood",
+      "wholeZone": "Whole zone",
+      "closeModal": "Close",
+      "viewMore": "see more"
+    },
+    "severity": {
+      "IMPORTANT": "Important",
+      "MEDIUM": "Moderate",
+      "MILD": "Mild"
+    },
+    "manage": {
+      "bannerTitle": "Alert management",
+      "bannerSubtitle": "Review, inspect and remove the safety alerts published on the platform.",
+      "tableTitle": "Alert log",
+      "colId": "ID",
+      "colSeverity": "Severity",
+      "colTitle": "Title",
+      "colArea": "Zone / Neighbourhood",
+      "colExpires": "Expires",
+      "colActions": "Actions",
+      "viewDetails": "View details",
+      "deleteAlert": "Delete",
+      "deleteConfirmTitle": "Delete alert",
+      "deleteConfirmBody": "Are you sure you want to delete this alert? This action cannot be undone.",
+      "deleteConfirm": "Delete",
+      "deleteCancel": "Cancel",
+      "deleting": "Deleting…",
+      "deleteError": "Could not delete the alert. Please try again.",
+      "loadError": "Could not load the alerts.",
+      "noResults": "There are no alerts on record.",
+      "modalTitle": "Alert details",
+      "modalClose": "Close",
+      "modalSeverity": "Severity",
+      "modalAlertTitle": "Title",
+      "modalDescription": "Description",
+      "modalZone": "Zone",
+      "modalNeighbourhood": "Neighbourhood",
+      "modalCoordinates": "Coordinates",
+      "modalCreatedAt": "Created",
+      "modalExpiresAt": "Expires"
+    },
+    "alertForm": {
+      "back": "Back",
+      "pageTitleCreate": "Create new alert",
+      "pageSubtitleCreate": "Publish a geo-referenced safety notice for the citizens.",
+      "severityLabel": "Severity",
+      "severityPlaceholder": "Select a severity…",
+      "titleLabel": "Title",
+      "titlePlaceholder": "Short summary of the incident",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "Describe the incident, what to avoid and, if possible, an alternative.",
+      "zoneLabel": "Zone",
+      "zonePlaceholder": "Select a zone…",
+      "neighbourhoodLabel": "Neighbourhood (optional)",
+      "neighbourhoodPlaceholder": "Select a neighbourhood…",
+      "neighbourhoodAll": "Whole zone",
+      "expiresAtLabel": "Expiration date",
+      "expiresAtHint": "The alert will be hidden at the end of the chosen day.",
+      "mapPickerTitle": "Location picker",
+      "coordinatesHint": "Click on the map to pin the location. Coordinates will update automatically.",
+      "submitCreate": "Create alert",
+      "submitting": "Saving…",
+      "cancel": "Cancel",
+      "errors": {
+        "severityRequired": "Pick a severity.",
+        "titleRequired": "Title is required.",
+        "descriptionRequired": "Description is required.",
+        "zoneRequired": "Pick a zone.",
+        "latitudeRequired": "Select a location on the map.",
+        "longitudeRequired": "Select a location on the map.",
+        "expiresAtRequired": "Pick an expiration date.",
+        "expiresAtPast": "The expiration date must be in the future.",
+        "serverError": "Could not create the alert. Please try again."
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

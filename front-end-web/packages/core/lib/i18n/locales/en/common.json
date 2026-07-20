@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "title": "Citizen Portal · Aranjuez City Council",
+    "titleTemplate": "%s · Citizen Portal",
+    "description": "Access municipal services, manage your transactions and stay informed about Aranjuez, World Heritage Site."
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "skipToNav": "Skip to navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "closeDialog": "Close dialog",
+    "loading": "Loading…",
+    "saved": "Changes saved",
+    "errorOccurred": "An error occurred",
+    "requiredField": "Required field",
+    "invalidField": "Invalid field",
+    "breadcrumb": "Breadcrumb",
+    "primaryNav": "Primary navigation",
+    "mobileNav": "Mobile navigation",
+    "userMenu": "User menu",
+    "languageMenu": "Language selector",
+    "themeToggle": "Toggle theme",
+    "notifications": "Notifications",
+    "currentPage": "Current page",
+    "externalLink": "Opens in a new tab",
+    "sessionExpiring": "Your session is about to expire",
+    "extendSession": "Extend session",
+    "mapKeyboardHint": "Use the keyboard: arrow keys to pan, +/− to zoom",
+    "coordsManualEntry": "Enter coordinates manually",
+    "coordsApply": "Apply",
+    "coordsInvalid": "Invalid coordinates",
+    "useMyLocation": "Use my location",
+    "locationDenied": "Location access denied. Using default location.",
+    "locationError": "Could not get your location. Using default location.",
+    "locating": "Getting your location…",
+    "easyReadLabel": "Easy read",
+    "accessibilityMenu": "Accessibility options",
+    "accessibilityMenuLabel": "Open accessibility options",
+    "settingsMenu": "Settings",
+    "settingsMenuLabel": "Open settings",
+    "languagePreferences": {
+      "title": "Language preferences",
+      "description": "Select the interface language"
+    },
+    "certificateVerification": {
+      "title": "FNMT certificate",
+      "description": "Verify your digital certificate",
+      "buttonLabel": "Validate certificate"
+    },
+    "accessibilityPreferences": {
+      "title": "Accessibility preferences"
+    },
+    "abbr": {
+      "DNI": "Spanish National Identity Document (Documento Nacional de Identidad)",
+      "NIF": "Spanish Tax Identification Number (Número de Identificación Fiscal)",
+      "OTP": "One-Time Password",
+      "mTLS": "Mutual Transport Layer Security",
+      "EU": "European Union",
+      "FNMT": "Spanish Royal Mint (Fábrica Nacional de Moneda y Timbre)",
+      "UNESCO": "United Nations Educational, Scientific and Cultural Organization"
+    },
+    "glossary": {
+      "title": "Glossary of terms",
+      "subtitle": "Definitions of the acronyms and technical terms used across this portal.",
+      "backToHelp": "Back to Help",
+      "entries": [
+        {
+          "term": "DNI",
+          "definition": "Documento Nacional de Identidad. The official ID document of Spanish citizens."
+        },
+        {
+          "term": "NIF",
+          "definition": "Número de Identificación Fiscal. The Spanish tax identification number for individuals and legal entities."
+        },
+        {
+          "term": "OTP",
+          "definition": "One-Time Password. A temporary numeric code sent by email or SMS to authorise an operation."
+        },
+        {
+          "term": "mTLS",
+          "definition": "Mutual TLS. A variant of the TLS protocol in which both the server and the client (the browser) present a digital certificate to authenticate each other."
+        },
+        {
+          "term": "FNMT",
+          "definition": "Fábrica Nacional de Moneda y Timbre. The Spanish public body that issues personal digital certificates recognised by the Public Administration."
+        },
+        {
+          "term": "EU",
+          "definition": "European Union. Licence plates carrying the blue «EU» band are issued in EU member states."
+        },
+        {
+          "term": "UNESCO",
+          "definition": "United Nations Educational, Scientific and Cultural Organization. Aranjuez has been on the UNESCO World Heritage list since 2001."
+        }
+      ]
+    },
+    "highContrast": {
+      "title": "High contrast",
+      "description": "Increases contrast between text and background for better readability",
+      "on": "On",
+      "off": "Off"
+    },
+    "textSize": {
+      "title": "Text size",
+      "description": "Adjust the interface text size",
+      "normal": "Normal",
+      "large": "Large"
+    },
+    "cursorSize": {
+      "title": "Large cursor",
+      "description": "Increases cursor size for better visibility",
+      "on": "On",
+      "off": "Off"
+    },
+    "highlightLinks": {
+      "title": "Highlight links",
+      "description": "Adds visual highlighting to all links on the page",
+      "on": "On",
+      "off": "Off"
+    }
+  },
+  "common": {
+    "brand": "Citizen Portal of Aranjuez",
+    "back": "Back"
+  },
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "eventsAgenda": "Agenda",
+    "eventsTickets": "My tickets",
+    "eventsCreate": "Create event",
+    "tourism": "Tourism",
+    "tourismRoutes": "Routes",
+    "tourismLocations": "Locations",
+    "tourismCreateRoute": "Create Route",
+    "tourismCreateLocation": "Create Location",
+    "participation": "Participation",
+    "security": "Security",
+    "securityAlerts": "Alerts",
+    "securityManage": "Manage alerts",
+    "leisure": "Leisure",
+    "leisureEvents": "Events",
+    "leisureSports": "Sports spaces",
+    "bookings": "Your city",
+    "bookingsFacilities": "Sports",
+    "bookingsCreateSpace": "Create space",
+    "mobility": "Mobility",
+    "mobilityCars": "My cars",
+    "mobilityMyStays": "My stays",
+    "mobilityMySanctions": "My sanctions",
+    "mobilityTickets": "Active stays",
+    "mobilitySanctions": "Sanctions",
+    "administration": "Administration",
+    "administrationCitizens": "Citizens",
+    "administrationWorkers": "Workers",
+    "administrationRecords": "Records",
+    "notifications": "Notifications",
+    "userMenu": "User menu",
+    "sidebarNav": "Sidebar navigation",
+    "verifyCertificate": "Verify digital certificate",
+    "participationQuestions": "Consultations",
+    "participationCreateQuestion": "Create consultation",
+    "mobileNav": {
+      "more": "More",
+      "menu": "Menu",
+      "close": "Close menu",
+      "services": "Services",
+      "servicesTitle": "Municipal services",
+      "servicesClose": "Close services"
+    },
+    "help": "Help"
+  },
+  "theme": {
+    "activateLight": "Switch to light mode",
+    "activateDark": "Switch to dark mode",
+    "light": "Light mode",
+    "dark": "Dark mode"
+  },
+  "lang": {
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "label": "Language"
+  },
+  "aiTranslate": {
+    "sectionHint": "Other languages — fill in each field or translate it from Spanish with AI.",
+    "button": "Translate with AI",
+    "translating": "Translating…",
+    "hint": "Translates the Spanish text with AI. Machine translation may contain errors; review it.",
+    "emptySource": "Type the Spanish text first so it can be translated.",
+    "error": "Could not translate. Please try again."
+  },
+  "auth": {
+    "login": "Sign in",
+    "logout": "Sign out",
+    "myProfile": "My profile",
+    "sessionExpiredTitle": "Session expired",
+    "sessionExpiredDescription": "Your session has expired. Please sign out to return to the home page.",
+    "sessionExpiredButton": "Sign out"
+  },
+  "status": {
+    "active": "Active",
+    "pending": "Pending",
+    "inactive": "Inactive",
+    "error": "Error"
+  },
+  "otp": {
+    "title": "Verification code",
+    "subtitle": "We have sent a 6-digit code to your email address.",
+    "verifying": "Verifying code…",
+    "requestingAuth": "Requesting authorisation…",
+    "authError": "The operation could not be carried out. Please try again later.",
+    "error": "The code entered is not valid. Check your email and try again.",
+    "expired": "You took too long to confirm the operation. You may try again.",
+    "mismatch": "This code is not valid. You may request a new code.",
+    "noAttempts": "You have entered the verification code incorrectly several times. Please try again in a few minutes.",
+    "newSent": "The code does not match the one we sent you. A new code has been sent to your email address.",
+    "alreadyUsed": "This verification code has already been used. You may request a new code.",
+    "resendCode": "Request a new code",
+    "retry": "Try again"
+  },
+  "certificate": {
+    "buttonLabel": "Verify digital certificate",
+    "dialogTitle": "Digital certificate verification",
+    "checking": "Checking…",
+    "valid": "Your digital certificate is valid.",
+    "invalid": "Your digital certificate is not valid or not available.",
+    "networkError": "Could not connect to the server. Please try again later.",
+    "close": "Close",
+    "dniLabel": "DNI / NIF",
+    "certInvalid": "You do not currently have a valid digital certificate issued by the FNMT. Obtain and install it by following the official guide and restart your browser.",
+    "certInvalidLine2": "If you selected the wrong certificate, fully restart your browser and try again.",
+    "certInvalidLink": "https://www.sede.fnmt.gob.es/certificados/persona-fisica",
+    "certInvalidLinkLabel": "official guide"
+  },
+  "unauthorized": {
+    "gateTitle": "Restricted zone",
+    "gateSubtitle": "Your credential does not grant entry to this district of the portal.",
+    "gateBody": "Just as some historic precincts in Aranjuez require a special pass, certain sections of the portal are reserved for a different user profile. If you believe this is an error, please contact the platform administrator.",
+    "gateHint": "The palace gates don't open for everyone — and neither does this section.",
+    "backHome": "Return to the main square"
+  },
+  "notFound": {
+    "title": "Pathless garden",
+    "subtitle": "It seems you've gotten lost",
+    "body": "As in the mazes of the Prince's Gardens, paths sometimes fade away. This page does not exist or has been moved to another flowerbed of the portal.",
+    "backHome": "Return to the main square"
+  }
+}

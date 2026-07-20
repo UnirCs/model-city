@@ -1,0 +1,14 @@
+{
+  "profile": {
+    "title": "Personal Data",
+    "name": "Name",
+    "email": "Email address",
+    "since": "Member since",
+    "neighbourhood": "Neighbourhood",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "logout": "Log out",
+    "backendError": "Could not load profile data from the server. Showing basic account information."
+  }
+}

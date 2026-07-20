@@ -1,0 +1,142 @@
+{
+  "participation": {
+    "questions": {
+      "bannerTitle": "Explorateur de Consultations",
+      "bannerSubtitle": "Votre voix construit l'avenir d'Aranjuez. Participez aux décisions qui affectent votre quartier et notre ville du patrimoine.",
+      "sectionActive": "Consultations Actives",
+      "sectionUpcoming": "Consultations à Venir",
+      "sectionFinished": "Consultations Terminées",
+      "participate": "Participer",
+      "viewDetails": "Voir les détails",
+      "closes": "Ferme le",
+      "opens": "Ouvre le",
+      "closedOn": "Terminée le",
+      "statusActive": "Active",
+      "statusUpcoming": "À venir",
+      "statusFinished": "Terminée",
+      "page": "Page",
+      "of": "sur",
+      "prev": "Précédent",
+      "next": "Suivant",
+            "noResults": "Aucune consultation disponible.",
+            "loadError": "Impossible de charger les consultations. Veuillez réessayer plus tard.",
+            "createNew": "Créer une nouvelle enquête",
+            "createNewHint": "Publier une nouvelle consultation citoyenne"
+    },
+    "questionDetail": {
+      "back": "Retour",
+      "statusActive": "Consultation Active",
+      "statusFuture": "À venir",
+      "statusPast": "Terminée",
+      "descriptionTitle": "Description Détaillée",
+      "objectivesTitle": "Objectifs de la Proposition",
+      "openPeriod": "Période de consultation :",
+      "to": "au",
+      "opensOn": "Ouvre le",
+      "closedOn": "Clôturée le",
+      "vote": {
+        "title": "Quelle est votre position ?",
+        "subtitle": "Votre vote est contraignant pour la décision",
+        "yes": "Pour",
+        "no": "Contre",
+        "confirm": "Confirmer le vote",
+        "registered": "Vote enregistré !",
+        "notActive": "Le vote n'est pas ouvert en ce moment.",
+        "alreadyVoted": "Vous avez déjà participé à cette consultation. Merci pour votre vote.",
+        "verifyingCert": "Vérification du certificat numérique…",
+        "voteError": "L'opération doit être effectuée à un autre moment. Veuillez réessayer plus tard.",
+        "duplicateVote": "Un vote a déjà été enregistré pour la personne physique identifiée dans le certificat numérique."
+      },
+      "stats": {
+        "title": "Participation",
+        "total": "Votes émis",
+        "inFavor": "Pour",
+        "against": "Contre"
+      },
+      "threshold": {
+        "title": "Seuil de validation",
+        "description": "Pour être prise en compte, cette consultation doit atteindre 10 000 réponses.",
+        "target": "10 000 réponses requises"
+      },
+      "loadError": "Impossible de charger la consultation. Veuillez réessayer plus tard.",
+      "notFound": "Consultation introuvable.",
+      "citizenOnly": {
+        "title": "Action réservée aux citoyens",
+        "message": "Cette action est réservée aux citoyens. Connectez-vous avec votre compte citoyen pour pouvoir effectuer cette action."
+      },
+      "adminActions": {
+        "sectionTitle": "Administration",
+        "startSurvey": "Démarrer le sondage",
+        "closeSurvey": "Clôturer le sondage",
+        "actionError": "Impossible d'effectuer l'opération. Veuillez réessayer."
+      },
+      "editQuestion": {
+        "buttonLabel": "Modifier la consultation",
+        "title": "Modifier la consultation",
+        "close": "Fermer",
+        "titleLabel": "Titre",
+        "titlePlaceholder": "Titre de la consultation",
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Description détaillée de la consultation",
+        "imageUrlLabel": "URL de l'image",
+        "imageUrlPlaceholder": "https://…",
+        "openDateLabel": "Date d'ouverture",
+        "closeDateLabel": "Date de clôture",
+        "zoneLabel": "Zone",
+        "neighbourhoodLabel": "Quartier",
+        "neighbourhoodPlaceholder": "Sélectionnez un quartier…",
+        "objectivesLabel": "Objectifs de la proposition",
+        "addObjective": "Ajouter un objectif",
+        "objectivePlaceholder": "Objectif",
+        "removeObjective": "Supprimer l'objectif",
+        "save": "Enregistrer les modifications",
+        "saving": "Enregistrement…",
+        "cancel": "Annuler",
+        "errors": {
+          "titleRequired": "Le titre est obligatoire.",
+          "descriptionRequired": "La description est obligatoire.",
+          "openDateRequired": "La date d'ouverture est obligatoire.",
+          "closeDateRequired": "La date de clôture est obligatoire.",
+          "dateOrder": "La date de clôture doit être postérieure à la date d'ouverture.",
+          "openDateTooSoon": "La date d'ouverture doit être au moins 3 jours après aujourd'hui.",
+          "neighbourhoodRequired": "Veuillez sélectionner un quartier.",
+          "serverError": "Impossible d'enregistrer la consultation. Veuillez réessayer."
+        }
+      }
+    },
+    "createQuestion": {
+      "back": "Retour",
+      "pageTitle": "Créer une nouvelle consultation",
+      "pageSubtitle": "Remplissez le formulaire pour publier une nouvelle consultation citoyenne.",
+      "titleLabel": "Titre",
+      "titlePlaceholder": "Titre de la consultation",
+      "descriptionLabel": "Description",
+      "descriptionPlaceholder": "Description détaillée de la consultation",
+      "imageUrlLabel": "URL de l'image",
+      "imageUrlHint": "Facultatif. URL de l'image de couverture de la consultation.",
+      "imageUrlPlaceholder": "https://…",
+      "openDateLabel": "Date d'ouverture",
+      "closeDateLabel": "Date de clôture",
+      "zoneLabel": "Zone",
+      "neighbourhoodLabel": "Quartier",
+      "neighbourhoodPlaceholder": "Sélectionnez un quartier…",
+      "objectivesLabel": "Objectifs de la proposition",
+      "addObjective": "Ajouter un objectif",
+      "objectivePlaceholder": "Objectif",
+      "removeObjective": "Supprimer l'objectif",
+      "submit": "Créer la consultation",
+      "submitting": "Création…",
+      "cancel": "Annuler",
+      "errors": {
+        "titleRequired": "Le titre est obligatoire.",
+        "descriptionRequired": "La description est obligatoire.",
+        "openDateRequired": "La date d'ouverture est obligatoire.",
+        "closeDateRequired": "La date de clôture est obligatoire.",
+        "dateOrder": "La date de clôture doit être postérieure à la date d'ouverture.",
+        "openDateTooSoon": "La date d'ouverture doit être au moins 3 jours après aujourd'hui.",
+        "neighbourhoodRequired": "Veuillez sélectionner un quartier.",
+        "serverError": "Impossible de créer la consultation. Veuillez réessayer."
+      }
+    }
+  }
+}

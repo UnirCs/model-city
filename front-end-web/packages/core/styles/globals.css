@@ -1,0 +1,528 @@
+/* Fonts are loaded via Next.js Font (Public Sans) and <link> in layout (Material Symbols) */
+@import "tailwindcss";
+
+/* Scan core's own components for class names — they live outside the app's
+   src/, so Tailwind's automatic content detection must be told. The enabled
+   feature modules' component sources are added by the generated Tailwind
+   manifest (`src/styles/modules.css`, emitted by `modelcity gen`), which
+   imports this file. */
+@source "../components";
+
+/* Dark mode enabled via .dark class on the html element */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS — Light Mode (default)
+   Values revised in Phase 2 of the WCAG 2.2 AAA programme.
+   Every text/background pair below now meets at least 7:1 contrast
+   (AAA, normal text) and every non-text/UI pair meets 3:1 (SC 1.4.11).
+   Run `python3 scripts/a11y_contrast.py` to re-verify after edits.
+   ───────────────────────────────────────────── */
+:root {
+  --ds-surface:                    #f7fafc;
+  --ds-surface-dim:                #d7dadc;
+  --ds-surface-bright:             #f7fafc;
+  --ds-surface-container-lowest:   #ffffff;
+  --ds-surface-container-low:      #f1f4f6;
+  --ds-surface-container:          #ebeef0;
+  --ds-surface-container-high:     #e5e9eb;
+  --ds-surface-container-highest:  #e0e3e5;
+  --ds-on-surface:                 #181c1e;
+  --ds-on-surface-variant:         #43474e;
+  --ds-inverse-surface:            #2d3133;
+  --ds-inverse-on-surface:         #eef1f3;
+  --ds-outline:                    #74777f;
+  /* Phase 2: was #c4c6cf (1.6:1) — bumped to meet SC 1.4.11 non-text 3:1. */
+  --ds-outline-variant:            #8c8f97;
+  --ds-surface-tint:               #455f88;
+  --ds-primary:                    #002045;
+  --ds-on-primary:                 #ffffff;
+  --ds-primary-container:          #1a365d;
+  /* Phase 2: was #86a0cd (4.58:1) — lightened to hit 7:1 on primary-container. */
+  --ds-on-primary-container:       #b6c6e1;
+  --ds-inverse-primary:            #adc7f7;
+  /* Phase 2: was #13696a (6.15:1) — darkened to hit 7:1 on surface. */
+  --ds-secondary:                  #0f5f60;
+  --ds-on-secondary:               #ffffff;
+  --ds-secondary-container:        #a2eded;
+  /* Phase 2: was #1a6d6e (4.59:1) — darkened to hit 7:1 on secondary-container. */
+  --ds-on-secondary-container:     #0f4849;
+  --ds-tertiary:                   #00213e;
+  --ds-on-tertiary:                #ffffff;
+  --ds-tertiary-container:         #003762;
+  /* Phase 2: was #58a2f0 (4.55:1) — lightened to hit 7:1 on tertiary-container. */
+  --ds-on-tertiary-container:      #9ec9f6;
+  /* Phase 2: was #ba1a1a (6.16:1) — darkened to hit 7:1 on surface. */
+  --ds-error:                      #a51616;
+  --ds-on-error:                   #ffffff;
+  --ds-error-container:            #ffdad6;
+  --ds-on-error-container:         #93000a;
+  --ds-success:                    #1e7e34;
+  --ds-on-success:                 #ffffff;
+  --ds-success-container:          #d4edda;
+  --ds-on-success-container:       #0f5132;
+  --ds-background:                 #f7fafc;
+  --ds-on-background:              #181c1e;
+  --ds-surface-variant:            #e0e3e5;
+  --ds-secondary-fixed:            #a5eff0;
+  --ds-primary-fixed-dim:          #adc7f7;
+}
+
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS — Dark Mode
+   Revised in Phase 2 — see notes above.
+   ───────────────────────────────────────────── */
+.dark {
+  --ds-surface:                    #0b1326;
+  --ds-surface-dim:                #0b1326;
+  --ds-surface-bright:             #31394d;
+  --ds-surface-container-lowest:   #060e20;
+  --ds-surface-container-low:      #131b2e;
+  --ds-surface-container:          #171f33;
+  --ds-surface-container-high:     #222a3d;
+  --ds-surface-container-highest:  #2d3449;
+  --ds-on-surface:                 #dae2fd;
+  --ds-on-surface-variant:         #c4c6cf;
+  --ds-inverse-surface:            #dae2fd;
+  --ds-inverse-on-surface:         #283044;
+  --ds-outline:                    #8e9099;
+  /* Phase 2: was #43474e (1.98:1) — bumped to meet SC 1.4.11 non-text 3:1. */
+  --ds-outline-variant:            #62656b;
+  --ds-surface-tint:               #adc7f7;
+  --ds-primary:                    #adc7f7;
+  --ds-on-primary:                 #133057;
+  --ds-primary-container:          #1a365d;
+  /* Phase 2: was #86a0cd (4.58:1) — lightened to hit 7:1. */
+  --ds-on-primary-container:       #b6c6e1;
+  --ds-inverse-primary:            #455f88;
+  --ds-secondary:                  #bcc7dd;
+  --ds-on-secondary:               #263142;
+  --ds-secondary-container:        #3c475a;
+  /* Phase 2: was #aab6cc (4.58:1) — lightened to hit 7:1. */
+  --ds-on-secondary-container:     #dadfe9;
+  --ds-tertiary:                   #a2c9ff;
+  --ds-on-tertiary:                #00315c;
+  --ds-tertiary-container:         #003765;
+  /* Phase 2: was #68a2e9 (4.57:1) — lightened to hit 7:1. */
+  --ds-on-tertiary-container:      #a5c8f2;
+  --ds-error:                      #ffb4ab;
+  --ds-on-error:                   #690005;
+  --ds-error-container:            #93000a;
+  --ds-on-error-container:         #ffdad6;
+  --ds-success:                    #4caf50;
+  --ds-on-success:                 #ffffff;
+  --ds-success-container:          #1b5e20;
+  --ds-on-success-container:       #a5d6a7;
+  --ds-background:                 #0b1326;
+  --ds-on-background:              #dae2fd;
+  --ds-surface-variant:            #2d3449;
+  --ds-secondary-fixed:            #a2c9ff;
+  --ds-primary-fixed-dim:          #adc7f7;
+}
+
+/* ─────────────────────────────────────────────
+   TAILWIND THEME — adaptive semantic tokens
+   ───────────────────────────────────────────── */
+@theme inline {
+  /* next/font injects --font-public-sans into <html>; we use that variable */
+  --font-sans: var(--font-public-sans, 'Public Sans', system-ui, sans-serif);
+
+  /* Colors */
+  --color-surface:                   var(--ds-surface);
+  --color-surface-dim:               var(--ds-surface-dim);
+  --color-surface-bright:            var(--ds-surface-bright);
+  --color-surface-container-lowest:  var(--ds-surface-container-lowest);
+  --color-surface-container-low:     var(--ds-surface-container-low);
+  --color-surface-container:         var(--ds-surface-container);
+  --color-surface-container-high:    var(--ds-surface-container-high);
+  --color-surface-container-highest: var(--ds-surface-container-highest);
+  --color-on-surface:                var(--ds-on-surface);
+  --color-on-surface-variant:        var(--ds-on-surface-variant);
+  --color-inverse-surface:           var(--ds-inverse-surface);
+  --color-inverse-on-surface:        var(--ds-inverse-on-surface);
+  --color-outline:                   var(--ds-outline);
+  --color-outline-variant:           var(--ds-outline-variant);
+  --color-surface-tint:              var(--ds-surface-tint);
+  --color-primary:                   var(--ds-primary);
+  --color-on-primary:                var(--ds-on-primary);
+  --color-primary-container:         var(--ds-primary-container);
+  --color-on-primary-container:      var(--ds-on-primary-container);
+  --color-inverse-primary:           var(--ds-inverse-primary);
+  --color-secondary:                 var(--ds-secondary);
+  --color-on-secondary:              var(--ds-on-secondary);
+  --color-secondary-container:       var(--ds-secondary-container);
+  --color-on-secondary-container:    var(--ds-on-secondary-container);
+  --color-tertiary:                  var(--ds-tertiary);
+  --color-on-tertiary:               var(--ds-on-tertiary);
+  --color-tertiary-container:        var(--ds-tertiary-container);
+  --color-on-tertiary-container:     var(--ds-on-tertiary-container);
+  --color-error:                     var(--ds-error);
+  --color-on-error:                  var(--ds-on-error);
+  --color-error-container:           var(--ds-error-container);
+  --color-on-error-container:        var(--ds-on-error-container);
+  --color-success:                   var(--ds-success);
+  --color-on-success:                var(--ds-on-success);
+  --color-success-container:         var(--ds-success-container);
+  --color-on-success-container:      var(--ds-on-success-container);
+  --color-background:                var(--ds-background);
+  --color-on-background:             var(--ds-on-background);
+  --color-surface-variant:           var(--ds-surface-variant);
+  --color-secondary-fixed:           var(--ds-secondary-fixed);
+  --color-primary-fixed-dim:         var(--ds-primary-fixed-dim);
+
+  /* Spacing (8px base scale) */
+  --spacing-xs:     0.25rem;   /* 4px  */
+  --spacing-base:   0.5rem;    /* 8px  */
+  --spacing-sm:     0.75rem;   /* 12px */
+  --spacing-md:     1.5rem;    /* 24px */
+  --spacing-lg:     3rem;      /* 48px */
+  --spacing-xl:     5rem;      /* 80px */
+  /* Default gutter (mobile). Overridden ≥640px in the responsive block
+     below to recover horizontal real-estate on small viewports while
+     keeping the comfortable 24px gutter on tablet/desktop. */
+  --spacing-gutter: 1rem;      /* 16px (sm+: 24px) */
+
+  /* Radii */
+  --radius-sm:   0.25rem;
+  --radius:      0.5rem;
+  --radius-md:   0.75rem;
+  --radius-lg:   1rem;
+  --radius-xl:   1.5rem;
+  --radius-full: 9999px;
+}
+
+/* ─────────────────────────────────────────────
+   TYPOGRAPHY UTILITIES
+   ───────────────────────────────────────────── */
+@utility text-h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+@utility text-h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+@utility text-h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+@utility text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@utility text-body-md {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@utility text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+@utility text-caption {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+@utility max-w-container-max {
+  max-width: 1280px;
+}
+
+/* ─────────────────────────────────────────────
+   ICONS — Material Symbols
+   ───────────────────────────────────────────── */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ─────────────────────────────────────────────
+   BASE STYLES
+   ───────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  /* Safety net: no element should ever force a horizontal scrollbar on
+     the document. `clip` (unlike `hidden`) does not create a scroll
+     container, so `position: sticky` and fixed-position overlays keep
+     working. Critical on mobile where small overshoots compound. */
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--ds-background);
+  color: var(--ds-on-surface);
+  font-family: var(--font-public-sans, 'Public Sans', system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  /* Prevent overly long unbroken tokens (URLs, locator codes) from
+     blowing past the viewport width on mobile. */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Responsive gutter — see token definition above. */
+@media (min-width: 640px) {
+  :root {
+    --spacing-gutter: 1.5rem; /* 24px from sm+ */
+  }
+}
+
+/* Media defaults — images/videos must never exceed their container. */
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─────────────────────────────────────────────
+   ACCESSIBILITY — WCAG 2.2 AAA baseline
+   ───────────────────────────────────────────── */
+
+/*
+ * Global :focus-visible ring.
+ * High-contrast 2px solid outline + 2px offset, contrast change ≥ 3:1
+ * against any surface (uses --color-primary). Components are free to
+ * override the colour but should keep the geometry — WCAG 2.4.7,
+ * 2.4.11, 2.4.13.
+ */
+:focus-visible {
+  outline: 2px solid var(--color-primary, #002045);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+/* Suppress default focus when :focus-visible is not matched (mouse click). */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/*
+ * Anchors / focusables targeted by in-document jumps (e.g. the skip-link
+ * landing on <main id="main">) must not be obscured by the fixed header.
+ * 4rem matches TopNavBar h-16 on mobile; 5rem matches h-20 from md+.
+ * WCAG 2.4.11 / 2.4.12.
+ */
+:target,
+[id="main"],
+main[tabindex] {
+  scroll-margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  :target,
+  [id="main"],
+  main[tabindex] {
+    scroll-margin-top: 5rem;
+  }
+}
+
+/*
+ * Reduced motion — disables non-essential transitions and animations
+ * when the user opts in via the OS setting. WCAG 2.3.3, 2.2.2.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+ * Scrollbar-none — hides the scrollbar in every browser while keeping
+ * the element scrollable. Used by SectionTabsBar for horizontal tabs.
+ */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/*
+ * Services FAB sheet — slide-up / slide-down keyframes.
+ * Applied via Tailwind arbitrary animation values in BottomNavBar.
+ * The `both` fill-mode locks the start/end states so there is no
+ * flash between the JS state change and the animation paint.
+ */
+@keyframes sheet-slide-in {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+@keyframes sheet-slide-out {
+  from { transform: translateY(0);    opacity: 1; }
+  to   { transform: translateY(100%); opacity: 0; }
+}
+
+/*
+ * Minimum interactive target size — WCAG 2.5.8 (AA, 24×24) baseline.
+ * Components requiring AAA (44×44) should additionally apply
+ * `min-h-[2.75rem] min-w-[2.75rem]` (utility `target-aaa`).
+ */
+@utility target-min {
+  min-height: 1.5rem;  /* 24px */
+  min-width: 1.5rem;
+}
+@utility target-aaa {
+  min-height: 2.75rem; /* 44px */
+  min-width: 2.75rem;
+}
+
+/*
+ * Visually-hidden helper — matches the `sr-only` Tailwind utility but
+ * exposed as a CSS class so non-React surfaces (HTML emails, etc.) can
+ * reuse it.
+ */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* ─────────────────────────────────────────────
+   ACCESSIBILITY OPTIONS
+   ───────────────────────────────────────────── */
+
+/*
+ * High contrast mode
+ * Increases contrast between text and background
+ */
+.a11y-high-contrast {
+  --ds-surface: #ffffff;
+  --ds-surface-container: #ffffff;
+  --ds-surface-container-high: #ffffff;
+  --ds-on-surface: #000000;
+  --ds-on-surface-variant: #000000;
+  --ds-outline: #000000;
+  --ds-outline-variant: #000000;
+  --ds-primary: #000000;
+  --ds-on-primary: #ffffff;
+  --ds-secondary: #000000;
+  --ds-on-secondary: #ffffff;
+  --ds-tertiary: #000000;
+  --ds-on-tertiary: #ffffff;
+  --ds-background: #ffffff;
+  --ds-on-background: #000000;
+}
+
+.a11y-high-contrast.dark {
+  --ds-surface: #000000;
+  --ds-surface-container: #000000;
+  --ds-surface-container-high: #000000;
+  --ds-on-surface: #ffffff;
+  --ds-on-surface-variant: #ffffff;
+  --ds-outline: #ffffff;
+  --ds-outline-variant: #ffffff;
+  --ds-primary: #ffffff;
+  --ds-on-primary: #000000;
+  --ds-secondary: #ffffff;
+  --ds-on-secondary: #000000;
+  --ds-tertiary: #ffffff;
+  --ds-on-tertiary: #000000;
+  --ds-background: #000000;
+  --ds-on-background: #ffffff;
+}
+
+/*
+ * Text size options
+ */
+.a11y-text-normal {
+  /* Default sizes - no override needed */
+}
+
+.a11y-text-large {
+  font-size: 120%;
+}
+
+.a11y-text-large .text-h1 {
+  font-size: 3rem;
+}
+
+.a11y-text-large .text-h2 {
+  font-size: 2.4rem;
+}
+
+.a11y-text-large .text-h3 {
+  font-size: 1.8rem;
+}
+
+.a11y-text-large .text-body-lg {
+  font-size: 1.35rem;
+}
+
+.a11y-text-large .text-body-md {
+  font-size: 1.2rem;
+}
+
+.a11y-text-large .text-label-md {
+  font-size: 1.05rem;
+}
+
+.a11y-text-large .text-caption {
+  font-size: 0.9rem;
+}
+
+/*
+ * Large cursor
+ */
+.a11y-large-cursor {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M4 4 L4 38 L14 28 L22 44 L30 40 L22 24 L38 24 Z" fill="black" stroke="white" stroke-width="2"/></svg>') 0 0, auto;
+}
+
+.a11y-large-cursor.dark {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M4 4 L4 38 L14 28 L22 44 L30 40 L22 24 L38 24 Z" fill="white" stroke="black" stroke-width="2"/></svg>') 0 0, auto;
+}
+
+/*
+ * Highlight links
+ * Adds visual highlighting to all links
+ */
+.a11y-highlight-links a,
+.a11y-highlight-links button:not([aria-pressed]) {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+.a11y-highlight-links a:hover,
+.a11y-highlight-links button:not([aria-pressed]):hover {
+  text-decoration-thickness: 3px;
+  background-color: var(--ds-surface-container);
+}
+

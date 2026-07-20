@@ -1,0 +1,46 @@
+{
+  "landing": {
+    "banner": {
+      "badge": "Aranjuez · Patrimoine Mondial UNESCO",
+      "title": "Aranjuez, en un clic",
+      "subtitle": "Le Portail Citoyen d'Aranjuez réunit l'agenda culturel, les services municipaux et la participation citoyenne dans un espace numérique unique. Démarches, réservations, alertes et bien plus encore, disponibles 24h/24 depuis n'importe quel appareil.",
+      "cta": "Accéder au portail",
+      "fnmtNote": "De plus, si vous disposez d'un certificat personnel valide émis par la FNMT, vous pouvez également participer aux consultations citoyennes."
+    },
+    "services": {
+      "title": "Que pouvez-vous faire ?",
+      "s1label": "Événements culturels",
+      "s1desc": "Agenda, théâtre, concerts et activités",
+      "s2label": "Guides touristiques",
+      "s2desc": "Itinéraires et monuments du Patrimoine mondial",
+      "s3label": "Participation citoyenne",
+      "s3desc": "Consultations et enquêtes de quartier",
+      "s4label": "Avis et alertes",
+      "s4desc": "Incidents et mises à jour sécurité en temps réel",
+      "s5label": "Espaces publics",
+      "s5desc": "Installations sportives et réservations",
+      "s6label": "Mobilité urbaine",
+      "s6desc": "Parking public et gestion du stationnement"
+    },
+    "footer": {
+      "address": "Plaza de la Constitución, 1 · 28300 Aranjuez, Madrid",
+      "seat": "Bureau Électronique",
+      "legal": "Mentions Légales",
+      "cookies": "Politique de Cookies",
+      "accessibility": "Accessibilité",
+      "contact": "Contact",
+      "glossary": "Glossaire",
+      "footerNav": "Pied de page",
+      "poweredBy": "Construit avec ModelCity, technologie open source pour plateformes logicielles de villes intelligentes.",
+      "poweredByLinkLabel": "ModelCity sur GitHub"
+    },
+    "easyRead": {
+      "title": "Lecture facile",
+      "intro": "Voici ce que vous pouvez faire sur ce portail, expliqué avec des mots simples :",
+      "p1": "Aranjuez a un site web pour ses habitants et ses visiteurs.",
+      "p2": "Ici vous pouvez voir les événements, les itinéraires touristiques, les alertes, réserver des installations et gérer votre voiture.",
+      "p3": "Pour l'utiliser, cliquez sur le bouton « Accéder au portail » et connectez-vous avec votre compte.",
+      "p4": "Si vous avez besoin d'aide, ouvrez la page Aide depuis le menu supérieur une fois connecté."
+    }
+  }
+}

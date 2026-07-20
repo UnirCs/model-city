@@ -1,0 +1,31 @@
+{
+  "help": {
+    "pageTitle": "Aide",
+    "pageSubtitle": "Trouvez des réponses aux questions fréquentes et les canaux de contact disponibles.",
+    "contactTitle": "Contact",
+    "contactBody": "Si vous ne trouvez pas la réponse que vous cherchez, vous pouvez nous contacter par les canaux suivants.",
+    "emailLabel": "Adresse e-mail",
+    "emailValue": "aide@modelcity.es",
+    "phoneLabel": "Ligne d'assistance citoyenne",
+    "phoneValue": "900 100 200",
+    "scheduleLabel": "Horaires d'ouverture",
+    "scheduleValue": "Du lundi au vendredi, de 9h00 à 18h00",
+    "faqTitle": "Questions fréquentes",
+    "faq": [
+      {
+        "q": "Comment consulter mes infractions de circulation ?",
+        "a": "Accédez à la section « Mobilité » et sélectionnez « Mes infractions »."
+      }
+    ],
+    "glossaryLinkLabel": "Voir le glossaire des termes",
+    "easyRead": {
+      "title": "Lecture facile",
+      "intro": "Voici ce que vous pouvez faire sur la page d'aide :",
+      "p1": "Si vous avez une question, regardez d'abord dans les questions fréquentes.",
+      "p2": "Si vous ne trouvez pas la réponse, vous pouvez écrire à l'adresse e-mail ou appeler le numéro indiqué ci-dessus.",
+      "p3": "Nous répondons par téléphone du lundi au vendredi, de 9 h à 18 h.",
+      "p4": "Vous pouvez également consulter le glossaire pour comprendre les mots techniques."
+    }
+  }
+}
+

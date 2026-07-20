@@ -1,0 +1,36 @@
+{
+  "home": {
+    "welcome": "👋🏻 Hola",
+    "subtitle": "Accede a todos los servicios municipales, mantente informado sobre la vida cultural y gestiona tus trámites desde un único lugar.",
+    "servicesTitle": "Servicios Municipales",
+    "noticeTitle": "Aviso Municipal Destacado",
+    "noticeMessage": "Corte de tráfico en la Calle de la Reina por obras de mejora del asfaltado. Se prevé duración hasta el viernes 24 de este mes. Consulta las rutas alternativas en la web municipal.",
+    "noticeLink": "Ver todos los avisos",
+    "services": {
+      "eventos": {
+        "title": "Eventos Culturales",
+        "description": "Descubre la agenda cultural de Aranjuez. Teatro, conciertos, exposiciones y actividades para todos los públicos."
+      },
+      "turismo": {
+        "title": "Guías de Turismo",
+        "description": "Explora el Patrimonio de la Humanidad. Rutas sugeridas, monumentos históricos y jardines emblemáticos."
+      },
+      "participacion": {
+        "title": "Participación Ciudadana",
+        "description": "Tu voz cuenta. Envía avisos de incidencias, participa en encuestas y consulta presupuestos participativos."
+      },
+      "seguridad": {
+        "title": "Seguridad Ciudadana",
+        "description": "Alertas locales, información de contacto de policía local y recomendaciones de protección civil."
+      },
+      "reservas": {
+        "title": "Reserva de Espacios",
+        "description": "Gestiona tus reservas para instalaciones deportivas, salas de biblioteca y centros comunitarios."
+      },
+      "movilidad": {
+        "title": "Movilidad",
+        "description": "Reserva tu plaza de aparcamiento en la zona de estacionamiento regulado."
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "registration": {
+    "brand": "Aranjuez City Council",
+    "heading": "Complete your registration",
+    "subtitle": "Before accessing the portal we need some additional information to identify you as a resident of the municipality.",
+    "emailLabel": "Email address",
+    "emailHint": "Obtained from your access account. Cannot be changed.",
+    "nameLabel": "Name",
+    "nameHint": "This is how we will recognise you on the portal. You can change it later from your profile.",
+    "namePlaceholder": "Full name",
+    "neighbourhoodLabel": "Neighbourhood",
+    "neighbourhoodHint": "Select the neighbourhood where you live. You can change it later from your profile.",
+    "neighbourhoodPlaceholder": "Select a neighbourhood…",
+    "submit": "Complete registration",
+    "submitting": "Registering…",
+    "back": "Back",
+    "privacy": "Your data will be processed in accordance with the",
+    "gdpr": "General Data Protection Regulation (GDPR)",
+    "privacyEnd": "and applicable municipal regulations.",
+    "errors": {
+      "nameRequired": "Name is required.",
+      "neighbourhoodRequired": "Please select a neighbourhood.",
+      "serverError": "Could not connect to the server. Please try again in a few minutes."
+    }
+  }
+}

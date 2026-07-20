@@ -1,0 +1,36 @@
+{
+  "home": {
+    "welcome": "Salut",
+    "subtitle": "Accédez à tous les services municipaux, restez informé de la vie culturelle et gérez vos démarches depuis un seul endroit.",
+    "servicesTitle": "Services Municipaux",
+    "noticeTitle": "Avis Municipal en Vedette",
+    "noticeMessage": "Fermeture de la circulation sur la Calle de la Reina en raison de travaux d'amélioration de la chaussée. Durée prévue jusqu'au vendredi 24. Consultez les itinéraires alternatifs sur le site municipal.",
+    "noticeLink": "Voir tous les avis",
+    "services": {
+      "eventos": {
+        "title": "Événements Culturels",
+        "description": "Découvrez l'agenda culturel d'Aranjuez. Théâtre, concerts, expositions et activités pour tous les publics."
+      },
+      "turismo": {
+        "title": "Guides Touristiques",
+        "description": "Explorez le site du Patrimoine mondial. Itinéraires suggérés, monuments historiques et jardins emblématiques."
+      },
+      "participacion": {
+        "title": "Participation Citoyenne",
+        "description": "Votre voix compte. Signalez des incidents, participez à des enquêtes et consultez les budgets participatifs."
+      },
+      "seguridad": {
+        "title": "Sécurité Publique",
+        "description": "Alertes locales, coordonnées de la police municipale et recommandations de la protection civile."
+      },
+      "reservas": {
+        "title": "Réservation d'Espaces",
+        "description": "Gérez vos réservations pour les installations sportives, les salles de bibliothèque et les centres communautaires."
+      },
+      "movilidad": {
+        "title": "Mobilité",
+        "description": "Réservez votre place de stationnement dans la zone de stationnement réglementé."
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@modelcity/leisure",
+  "version": "1.0.0",
+  "description": "Leisure feature module: events, sports spaces and tourism.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UnirCs/model-city.git",
+    "directory": "front-end-web/packages/leisure"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "dependencies": {
+    "@modelcity/core": "1.0.0"
+  },
+  "peerDependencies": {
+    "next": "^16.2.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "maplibre-gl": "^5.24.0",
+    "qrcode.react": "^4.2.0"
+  }
+}

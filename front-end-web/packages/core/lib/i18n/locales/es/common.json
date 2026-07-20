@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "title": "Portal Ciudadano · Ayuntamiento de Aranjuez",
+    "titleTemplate": "%s · Portal Ciudadano",
+    "description": "Accede a los servicios municipales, gestiona tus trámites y mantente informado sobre Aranjuez, Patrimonio Mundial."
+  },
+  "a11y": {
+    "skipToContent": "Saltar al contenido principal",
+    "skipToNav": "Saltar a la navegación",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "closeDialog": "Cerrar diálogo",
+    "loading": "Cargando…",
+    "saved": "Cambios guardados",
+    "errorOccurred": "Se ha producido un error",
+    "requiredField": "Campo obligatorio",
+    "invalidField": "Campo no válido",
+    "breadcrumb": "Migas de pan",
+    "primaryNav": "Navegación principal",
+    "mobileNav": "Navegación móvil",
+    "userMenu": "Menú de usuario",
+    "languageMenu": "Selector de idioma",
+    "themeToggle": "Cambiar tema",
+    "notifications": "Notificaciones",
+    "currentPage": "Página actual",
+    "externalLink": "Se abre en una nueva pestaña",
+    "sessionExpiring": "Tu sesión está a punto de caducar",
+    "extendSession": "Extender sesión",
+    "mapKeyboardHint": "Usa el teclado: flechas para moverte, +/− para acercar o alejar",
+    "coordsManualEntry": "Introducir coordenadas manualmente",
+    "coordsApply": "Aplicar",
+    "coordsInvalid": "Coordenadas no validas",
+    "useMyLocation": "Usar mi ubicación",
+    "locationDenied": "Acceso a la ubicación denegado. Usando ubicación por defecto.",
+    "locationError": "No se pudo obtener tu ubicación. Usando ubicación por defecto.",
+    "locating": "Obteniendo tu ubicación…",
+    "easyReadLabel": "Lectura fácil",
+    "accessibilityMenu": "Opciones de accesibilidad",
+    "accessibilityMenuLabel": "Abrir opciones de accesibilidad",
+    "settingsMenu": "Configuración",
+    "settingsMenuLabel": "Abrir configuración",
+    "languagePreferences": {
+      "title": "Preferencias de idioma",
+      "description": "Selecciona el idioma de la interfaz"
+    },
+    "certificateVerification": {
+      "title": "Certificado de la FNMT",
+      "description": "Verifica tu certificado digital",
+      "buttonLabel": "Validar certificado"
+    },
+    "accessibilityPreferences": {
+      "title": "Preferencias de accesibilidad"
+    },
+    "abbr": {
+      "DNI": "Documento Nacional de Identidad",
+      "NIF": "Número de Identificación Fiscal",
+      "OTP": "Contraseña de un solo uso (One-Time Password)",
+      "mTLS": "TLS mutuo (Mutual Transport Layer Security)",
+      "EU": "Unión Europea",
+      "FNMT": "Fábrica Nacional de Moneda y Timbre",
+      "UNESCO": "Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura"
+    },
+    "glossary": {
+      "title": "Glosario de términos",
+      "subtitle": "Definiciones de las siglas y términos técnicos utilizados en este portal.",
+      "backToHelp": "Volver a Ayuda",
+      "entries": [
+        {
+          "term": "DNI",
+          "definition": "Documento Nacional de Identidad. Documento oficial que acredita la identidad de las personas españolas."
+        },
+        {
+          "term": "NIF",
+          "definition": "Número de Identificación Fiscal. Identificador fiscal de personas físicas y jurídicas en España."
+        },
+        {
+          "term": "OTP",
+          "definition": "Contraseña de un solo uso (One-Time Password). Código numérico temporal que se envía por correo electrónico o SMS para autorizar una operación."
+        },
+        {
+          "term": "mTLS",
+          "definition": "TLS mutuo. Variante del protocolo TLS en la que tanto el servidor como el cliente (el navegador) presentan un certificado digital para autenticarse."
+        },
+        {
+          "term": "FNMT",
+          "definition": "Fábrica Nacional de Moneda y Timbre. Organismo público español que emite certificados digitales personales reconocidos por la Administración."
+        },
+        {
+          "term": "EU",
+          "definition": "Unión Europea. Las matrículas con la franja azul «EU» se emiten en los países miembros."
+        },
+        {
+          "term": "UNESCO",
+          "definition": "Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura. Aranjuez está inscrita en la lista del Patrimonio Mundial de la UNESCO desde 2001."
+        }
+      ]
+    },
+    "highContrast": {
+      "title": "Alto contraste",
+      "description": "Aumenta el contraste entre texto y fondo para mejorar la legibilidad",
+      "on": "Activado",
+      "off": "Desactivado"
+    },
+    "textSize": {
+      "title": "Tamaño de texto",
+      "description": "Ajusta el tamaño del texto de la interfaz",
+      "normal": "Normal",
+      "large": "Grande"
+    },
+    "cursorSize": {
+      "title": "Cursor grande",
+      "description": "Aumenta el tamaño del cursor para facilitar su visibilidad",
+      "on": "Activado",
+      "off": "Desactivado"
+    },
+    "highlightLinks": {
+      "title": "Resaltar enlaces",
+      "description": "Añade un resaltado visual a todos los enlaces de la página",
+      "on": "Activado",
+      "off": "Desactivado"
+    }
+  },
+  "common": {
+    "brand": "Portal ciudadano de Aranjuez",
+    "back": "Volver"
+  },
+  "nav": {
+    "home": "Inicio",
+    "events": "Eventos",
+    "eventsAgenda": "Agenda",
+    "eventsTickets": "Mis entradas",
+    "eventsCreate": "Crear evento",
+    "tourism": "Turismo",
+    "tourismRoutes": "Rutas",
+    "tourismLocations": "Ubicaciones",
+    "tourismCreateRoute": "Crear Ruta",
+    "tourismCreateLocation": "Crear Ubicación",
+    "participation": "Participación",
+    "security": "Seguridad",
+    "securityAlerts": "Alertas",
+    "securityManage": "Gestionar alertas",
+    "leisure": "Ocio",
+    "leisureEvents": "Eventos",
+    "leisureSports": "Espacios deportivos",
+    "bookings": "Tu ciudad",
+    "bookingsFacilities": "Deportes",
+    "bookingsCreateSpace": "Crear espacio",
+    "mobility": "Movilidad",
+    "mobilityCars": "Mis coches",
+    "mobilityMyStays": "Mis estancias",
+    "mobilityMySanctions": "Mis sanciones",
+    "mobilityTickets": "Estancias activas",
+    "mobilitySanctions": "Sanciones",
+    "administration": "Administración",
+    "administrationCitizens": "Ciudadanos",
+    "administrationWorkers": "Trabajadores",
+    "administrationRecords": "Registros",
+    "notifications": "Notificaciones",
+    "userMenu": "Menú de usuario",
+    "sidebarNav": "Navegación lateral",
+    "verifyCertificate": "Verificar certificado digital",
+    "participationQuestions": "Consultas",
+    "participationCreateQuestion": "Crear consulta",
+    "mobileNav": {
+      "more": "Más",
+      "menu": "Menú",
+      "close": "Cerrar menú",
+      "services": "Servicios",
+      "servicesTitle": "Servicios municipales",
+      "servicesClose": "Cerrar servicios"
+    },
+    "help": "Ayuda"
+  },
+  "theme": {
+    "activateLight": "Activar modo claro",
+    "activateDark": "Activar modo oscuro",
+    "light": "Modo claro",
+    "dark": "Modo oscuro"
+  },
+  "lang": {
+    "es": "Español",
+    "en": "English",
+    "fr": "Français",
+    "label": "Idioma"
+  },
+  "aiTranslate": {
+    "sectionHint": "Otros idiomas — completa cada campo o tradúcelo con IA desde el castellano.",
+    "button": "Traducir con IA",
+    "translating": "Traduciendo…",
+    "hint": "Traduce el texto en castellano con IA. La traducción automática puede contener errores; revísala.",
+    "emptySource": "Escribe primero el texto en castellano para poder traducirlo.",
+    "error": "No se pudo traducir. Inténtalo de nuevo."
+  },
+  "auth": {
+    "login": "Acceder",
+    "logout": "Cerrar Sesión",
+    "myProfile": "Mi perfil",
+    "sessionExpiredTitle": "Sesión caducada",
+    "sessionExpiredDescription": "Tu sesión ha caducado. Por favor, cierra la sesión para volver a la página principal.",
+    "sessionExpiredButton": "Cerrar sesión"
+  },
+  "status": {
+    "active": "Activo",
+    "pending": "Pendiente",
+    "inactive": "Inactivo",
+    "error": "Error"
+  },
+  "otp": {
+    "title": "Código de verificación",
+    "subtitle": "Hemos enviado un código de 6 dígitos a tu correo electrónico.",
+    "verifying": "Verificando código…",
+    "requestingAuth": "Solicitando autorización…",
+    "authError": "No se ha podido llevar a cabo la operación. Por favor, inténtelo de nuevo más tarde.",
+    "error": "El código introducido no es válido. Comprueba tu correo e inténtalo de nuevo.",
+    "expired": "Has tardado demasiado tiempo en confirmar la operación. Puedes intentarlo de nuevo.",
+    "mismatch": "Este código no es válido. Puedes solicitar otro código diferente.",
+    "noAttempts": "Has introducido de forma errónea el código de verificación varias veces. Inténtalo en unos minutos.",
+    "newSent": "El código no coincide con el que te hemos enviado. Se ha enviado un nuevo código a tu correo electrónico.",
+    "alreadyUsed": "Este código de verificación ya ha sido usado. Puedes solicitar otro código diferente.",
+    "resendCode": "Solicitar nuevo código",
+    "retry": "Intentar de nuevo"
+  },
+  "certificate": {
+    "buttonLabel": "Verificar certificado",
+    "dialogTitle": "Verificación de certificado digital",
+    "checking": "Comprobando…",
+    "valid": "Tu certificado digital es válido.",
+    "invalid": "Tu certificado digital no es válido o no está disponible.",
+    "networkError": "No se pudo conectar con el servidor. Inténtalo más tarde.",
+    "close": "Cerrar",
+    "dniLabel": "DNI / NIF",
+    "certInvalid": "No dispone en estos momentos de un certificado digital válido emitido por la FNMT. Obténgalo e instálelo siguiendo la guía oficial y reinicie el navegador.",
+    "certInvalidLine2": "Si seleccionó un certificado equivocado, reinicie el navegador por completo y vuelva a realizar la operación.",
+    "certInvalidLink": "https://www.sede.fnmt.gob.es/certificados/persona-fisica",
+    "certInvalidLinkLabel": "guía oficial"
+  },
+  "unauthorized": {
+    "gateTitle": "Zona de acceso restringido",
+    "gateSubtitle": "Tu credencial no tiene permiso para entrar en este distrito del portal.",
+    "gateBody": "Como ocurre con algunos recintos históricos de Aranjuez, ciertas secciones del portal requieren un pase especial. Este área está reservada para un perfil de usuario diferente al tuyo. Si crees que es un error, contacta con el administrador de la plataforma.",
+    "gateHint": "La verja del palacio no se abre para todos — y esta sección tampoco.",
+    "backHome": "Volver a la plaza principal"
+  },
+  "notFound": {
+    "title": "Jardín sin sendero",
+    "subtitle": "Parece que te has perdido",
+    "body": "Como en los laberintos de los Jardines del Príncipe, a veces los caminos se desvanecen. Esta página no existe o ha sido trasladada a otro parterre del portal.",
+    "backHome": "Volver a la plaza principal"
+  }
+}

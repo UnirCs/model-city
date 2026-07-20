@@ -1,0 +1,26 @@
+{
+  "registration": {
+    "brand": "Ayuntamiento de Aranjuez",
+    "heading": "Completa tu registro",
+    "subtitle": "Antes de acceder al portal necesitamos unos datos adicionales para identificarte como ciudadano o ciudadana del municipio.",
+    "emailLabel": "Correo electrónico",
+    "emailHint": "Obtenido de tu cuenta de acceso. No puede modificarse.",
+    "nameLabel": "Nombre",
+    "nameHint": "Así te reconoceremos en el portal. Puedes modificarlo más adelante desde tu perfil.",
+    "namePlaceholder": "Nombre y apellidos",
+    "neighbourhoodLabel": "Barrio de residencia",
+    "neighbourhoodHint": "Selecciona el barrio en el que vives. Podrás modificarlo más adelante desde tu perfil.",
+    "neighbourhoodPlaceholder": "Selecciona un barrio…",
+    "submit": "Completar registro",
+    "submitting": "Registrando…",
+    "back": "Atrás",
+    "privacy": "Tus datos serán tratados conforme al",
+    "gdpr": "Reglamento General de Protección de Datos (RGPD)",
+    "privacyEnd": "y la normativa municipal vigente.",
+    "errors": {
+      "nameRequired": "El nombre es obligatorio.",
+      "neighbourhoodRequired": "Selecciona el barrio en el que resides.",
+      "serverError": "No se pudo conectar con el servidor. Inténtalo en unos minutos."
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "profile": {
+    "title": "Données Personnelles",
+    "name": "Nom",
+    "email": "Adresse e-mail",
+    "since": "Membre depuis",
+    "neighbourhood": "Quartier",
+    "edit": "Modifier",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "logout": "Déconnexion",
+    "backendError": "Impossible de charger les données du profil depuis le serveur. Affichage des informations de base du compte."
+  }
+}
