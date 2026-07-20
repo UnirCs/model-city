@@ -1,9 +1,16 @@
 # Publishes the front-end release train (`@modelcity/*` + create-model-city-app)
 # to the npm registry when a `web-v*` tag is pushed.
 #
+# Auth: npm Trusted Publishing (OIDC) — no long-lived token. GitHub Actions
+# presents its OIDC identity (`id-token: write`) and npm mints short-lived
+# credentials for this run. Each published package must have this repo +
+# workflow registered as a Trusted Publisher on npmjs.com; npm only allows
+# that on a package that already exists, so the very first 1.0.0 is published
+# once manually (see docs/architecture/publishing-and-archetype-plan.md).
+#
 # Prerequisites:
-#   - The `NPM_TOKEN` repository secret: a granular npm access token with
-#     publish permission on the @modelcity scope (and create-model-city-app).
+#   - Trusted Publisher configured on all six packages (@modelcity/{core,cli,
+#     leisure,engagement,mobility} + create-model-city-app).
 #   - Versions bumped beforehand with `node scripts/release.mjs <version>`
 #     (run from front-end-web/), which the tag-consistency step enforces.
 name: publish-web
@@ -28,8 +35,12 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           registry-url: 'https://registry.npmjs.org'
+
+      # Trusted Publishing (OIDC) requires npm >= 11.5.1. Node 24 ships npm 11,
+      # but pin the latest to stay above the floor regardless of the image.
+      - run: npm install -g npm@latest
 
       - name: Check the tag matches the release-train version
         run: |
@@ -48,7 +59,7 @@ jobs:
       # Quality gate: the reference app must build with the packages about to ship.
       - run: npm run build
 
-      - name: Publish the release train (with npm provenance)
+      # No NODE_AUTH_TOKEN: auth is OIDC via Trusted Publishing. Provenance is
+      # attached automatically (requires the source repo to be public).
+      - name: Publish the release train
         run: npm publish --workspaces --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
