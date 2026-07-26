@@ -1,6 +1,6 @@
 {
   "registration": {
-    "brand": "Aranjuez City Council",
+    "brand": "{city} City Council",
     "heading": "Complete your registration",
     "subtitle": "Before accessing the portal we need some additional information to identify you as a resident of the municipality.",
     "emailLabel": "Email address",

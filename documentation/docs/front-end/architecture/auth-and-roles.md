@@ -14,15 +14,22 @@ global role catalogue plus per-module capability helpers.
 
 `packages/core/lib/auth/auth0.js` constructs a single `Auth0Client`. It reads the
 standard Auth0 env vars automatically (`AUTH0_DOMAIN`, `AUTH0_CLIENT_ID`,
-`AUTH0_CLIENT_SECRET`, `AUTH0_SECRET`, `APP_BASE_URL`) and requests an audience so
-the **access token is a full RS256 JWT** the backend (and this app) can decode:
+`AUTH0_CLIENT_SECRET`, `AUTH0_SECRET`, `APP_BASE_URL`) and requests the audience
+from **`AUTH0_AUDIENCE`** (the API Identifier, shared with the backend) so the
+**access token is a full RS256 JWT** the backend (and this app) can decode:
 
 ```js
 authorizationParameters: {
-  audience: '<<your-api-audience>>',
+  audience: process.env.AUTH0_AUDIENCE,
   scope:    'openid profile email',
 }
 ```
+
+:::note
+`AUTH0_AUDIENCE` is the same value the backend validates. It is not a secret (it
+already travels inside every token), but it is a per-tenant setting, so it lives
+in the environment rather than being hard-coded.
+:::
 
 The proxy delegates all `/auth/*` routes to `auth0.middleware()`: `/auth/login`,
 `/auth/logout`, `/auth/callback`, `/auth/profile`, `/auth/access-token`.
@@ -59,10 +66,12 @@ Helpers receive the **full session** returned by `auth0.getSession()` and read:
 ## Roles
 
 `packages/core/lib/auth/roles.js` is the single source of truth. Roles come from a
-**namespaced custom claim**:
+**namespaced custom claim**. Auth0 uses the API audience as the namespace, so the
+claim is derived from `AUTH0_AUDIENCE` (read server-side, where the token is
+decoded):
 
 ```js
-export const ROLES_CLAIM = 'https://<<your-api-audience>>/roles';
+export const ROLES_CLAIM = `${process.env.AUTH0_AUDIENCE}/roles`;
 ```
 
 `getUserRoles(session)` decodes the access-token payload (base64url, no

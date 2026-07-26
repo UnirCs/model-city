@@ -1,6 +1,7 @@
 import LoginButton from '@modelcity/core/components/molecules/LoginButton';
 import Icon from '@modelcity/core/components/atoms/Icon';
 import Abbr from '@modelcity/core/components/atoms/Abbr';
+import modelCityConfig from '@modelcity/config';
 
 /**
  * Renders a translated sentence, wrapping occurrences of known acronyms in
@@ -28,23 +29,25 @@ function withAbbr(text, terms, abbr) {
  * }} props
  */
 export default function LandingBanner({ t, lang, abbr }) {
+  // Three landing photos (base + two diagonal strips), configured per city.
+  const [baseImage, midImage, farImage] = modelCityConfig.landingImages;
   return (
     <section
       className="relative overflow-hidden flex items-center"
       style={{ minHeight: '82vh' }}
       aria-labelledby="landing-title"
     >
-      {/* ── Layer 1: Palace — full-bleed base ── */}
+      {/* ── Layer 1: full-bleed base ── */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="https://www.spain.info/export/sites/segtur/.content/imagenes/rutas/escapada-aranjuez/palacio-real-aranjuez-s1089121742.jpg"
-        alt="Real Palacio de Aranjuez"
+        src={baseImage.url}
+        alt={baseImage.alt}
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ objectPosition: '68% center' }}
+        style={{ objectPosition: baseImage.objectPosition }}
         aria-hidden="true"
       />
 
-      {/* ── Layer 2: Jardines — diagonal strip, middle-right ── */}
+      {/* ── Layer 2: diagonal strip, middle-right ── */}
       <div
         className="absolute inset-y-0 right-0"
         style={{ width: '56%', clipPath: 'polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%)' }}
@@ -52,16 +55,16 @@ export default function LandingBanner({ t, lang, abbr }) {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://visitmadrid-files.s3.eu-west-1.amazonaws.com/files/2023-12/jardines-Aranjuez.jpg"
-          alt=""
+          src={midImage.url}
+          alt={midImage.alt}
           className="w-full h-full object-cover"
-          style={{ objectPosition: 'center 35%' }}
+          style={{ objectPosition: midImage.objectPosition }}
         />
         {/* Subtle dark tint so it recedes vs. the top strip */}
         <div className="absolute inset-0" style={{ background: 'rgba(4,10,20,0.18)' }} />
       </div>
 
-      {/* ── Layer 3: Riverside view — narrow diagonal strip, far right ── */}
+      {/* ── Layer 3: narrow diagonal strip, far right ── */}
       <div
         className="absolute inset-y-0 right-0"
         style={{ width: '28%', clipPath: 'polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%)' }}
@@ -69,10 +72,10 @@ export default function LandingBanner({ t, lang, abbr }) {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://visita.aranjuez.es/wp-content/uploads/2022/01/PicsArt_09-27-09.34.50-1024x768.jpg"
-          alt=""
+          src={farImage.url}
+          alt={farImage.alt}
           className="w-full h-full object-cover"
-          style={{ objectPosition: 'center center' }}
+          style={{ objectPosition: farImage.objectPosition }}
         />
       </div>
 
@@ -163,7 +166,7 @@ export default function LandingBanner({ t, lang, abbr }) {
               style={{ fontSize: '0.82rem', lineHeight: 1.6, maxWidth: '46ch' }}
             >
               <Icon name="verified_user" size={15} className="text-amber-300/60 shrink-0 mt-0.5" />
-              {withAbbr(t.banner.fnmtNote, ['FNMT'], abbr)}
+              <span>{withAbbr(t.banner.fnmtNote, ['FNMT'], abbr)}</span>
             </p>
           </div>
         </div>

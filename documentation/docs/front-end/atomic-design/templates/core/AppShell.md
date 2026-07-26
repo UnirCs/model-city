@@ -42,7 +42,7 @@ template in the design system.
 ## Internationalisation
 
 Forwards `lang` to its children; the backdrop image comes from
-`NEXT_PUBLIC_BACKGROUND_IMAGE_URL`.
+`modelcity.config.js` (`backgroundImageUrl`, imported via `@modelcity/config`).
 
 ## Accessibility
 

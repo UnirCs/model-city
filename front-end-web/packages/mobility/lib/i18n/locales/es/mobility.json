@@ -104,7 +104,7 @@
     },
     "mySanctions": {
       "bannerTitle": "Mis sanciones",
-      "bannerSubtitle": "Histórico de las multas que has recibido en Aranjuez. Pulsa en una sanción para ver la evidencia fotográfica.",
+      "bannerSubtitle": "Histórico de las multas que has recibido en {city}. Pulsa en una sanción para ver la evidencia fotográfica.",
       "sectionTitle": "Sanciones recibidas",
       "empty": "No tienes ninguna sanción registrada.",
       "loadError": "No se pudieron cargar las sanciones. Inténtalo más tarde.",

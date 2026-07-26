@@ -104,7 +104,7 @@
     },
     "mySanctions": {
       "bannerTitle": "My sanctions",
-      "bannerSubtitle": "History of the fines you received in Aranjuez. Tap a sanction to view the photo evidence.",
+      "bannerSubtitle": "History of the fines you received in {city}. Tap a sanction to view the photo evidence.",
       "sectionTitle": "Received sanctions",
       "empty": "You have no registered sanctions.",
       "loadError": "Could not load sanctions. Please try again later.",

@@ -2,7 +2,7 @@
   "participation": {
     "questions": {
       "bannerTitle": "Consultation Explorer",
-      "bannerSubtitle": "Your voice builds the future of Aranjuez. Participate in the decisions affecting your neighbourhood and our heritage city.",
+      "bannerSubtitle": "Your voice builds the future of {city}. Participate in the decisions affecting your neighbourhood and our heritage city.",
       "sectionActive": "Active Consultations",
       "sectionUpcoming": "Upcoming Consultations",
       "sectionFinished": "Finished Consultations",

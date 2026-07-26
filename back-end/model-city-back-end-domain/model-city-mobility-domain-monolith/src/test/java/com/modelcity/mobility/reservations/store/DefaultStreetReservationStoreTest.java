@@ -3,6 +3,7 @@ package com.modelcity.mobility.reservations.store;
 import com.modelcity.mobility.reservations.repository.StreetReservationRepository;
 import com.modelcity.mobility.reservations.repository.model.ReservationStatus;
 import com.modelcity.mobility.reservations.repository.model.StreetReservation;
+import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -30,11 +31,15 @@ class DefaultStreetReservationStoreTest {
     @Mock
     StreetReservationRepository<StreetReservation> streetReservationRepository;
 
+    @Mock
+    EntityManager entityManager;
+
     DefaultStreetReservationStore store;
 
     @BeforeEach
     void setUp() {
         store = new DefaultStreetReservationStore(streetReservationRepository);
+        store.entityManager = entityManager;
     }
 
     @Test

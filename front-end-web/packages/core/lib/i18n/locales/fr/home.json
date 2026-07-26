@@ -9,7 +9,7 @@
     "services": {
       "eventos": {
         "title": "Événements Culturels",
-        "description": "Découvrez l'agenda culturel d'Aranjuez. Théâtre, concerts, expositions et activités pour tous les publics."
+        "description": "Découvrez l'agenda culturel d'{city}. Théâtre, concerts, expositions et activités pour tous les publics."
       },
       "turismo": {
         "title": "Guides Touristiques",

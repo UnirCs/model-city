@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Portal Ciudadano · Ayuntamiento de Aranjuez",
+    "title": "Portal Ciudadano · Ayuntamiento de {city}",
     "titleTemplate": "%s · Portal Ciudadano",
-    "description": "Accede a los servicios municipales, gestiona tus trámites y mantente informado sobre Aranjuez, Patrimonio Mundial."
+    "description": "Accede a los servicios municipales, gestiona tus trámites y mantente informado sobre {city}, Patrimonio Mundial."
   },
   "a11y": {
     "skipToContent": "Saltar al contenido principal",
@@ -91,7 +91,7 @@
         },
         {
           "term": "UNESCO",
-          "definition": "Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura. Aranjuez está inscrita en la lista del Patrimonio Mundial de la UNESCO desde 2001."
+          "definition": "Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura. {city} está inscrita en la lista del Patrimonio Mundial de la UNESCO desde 2001."
         }
       ]
     },
@@ -121,7 +121,7 @@
     }
   },
   "common": {
-    "brand": "Portal ciudadano de Aranjuez",
+    "brand": "Portal ciudadano de {city}",
     "back": "Volver"
   },
   "nav": {
@@ -237,7 +237,7 @@
   "unauthorized": {
     "gateTitle": "Zona de acceso restringido",
     "gateSubtitle": "Tu credencial no tiene permiso para entrar en este distrito del portal.",
-    "gateBody": "Como ocurre con algunos recintos históricos de Aranjuez, ciertas secciones del portal requieren un pase especial. Este área está reservada para un perfil de usuario diferente al tuyo. Si crees que es un error, contacta con el administrador de la plataforma.",
+    "gateBody": "Como ocurre con algunos recintos históricos de {city}, ciertas secciones del portal requieren un pase especial. Este área está reservada para un perfil de usuario diferente al tuyo. Si crees que es un error, contacta con el administrador de la plataforma.",
     "gateHint": "La verja del palacio no se abre para todos — y esta sección tampoco.",
     "backHome": "Volver a la plaza principal"
   },

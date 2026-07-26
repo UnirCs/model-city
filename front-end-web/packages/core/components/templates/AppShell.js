@@ -5,6 +5,7 @@ import MobileNav from '@modelcity/core/components/organisms/MobileNav';
 import MobileSectionTabs from '@modelcity/core/components/organisms/MobileSectionTabs';
 import ScrollToTop from '@modelcity/core/components/atoms/ScrollToTop';
 import SessionExpiredModal from '@modelcity/core/components/molecules/SessionExpiredModal';
+import modelCityConfig from '@modelcity/config';
 
 /**
  * Template: AppShell
@@ -28,7 +29,7 @@ export default function AppShell({ children, lang, sessionExpired = false }) {
       <div
         aria-hidden="true"
         className="pointer-events-none select-none fixed top-0 left-0 right-0 bottom-0 -z-10 bg-center bg-cover bg-no-repeat opacity-[0.08]"
-        style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_BACKGROUND_IMAGE_URL}')` }}
+        style={{ backgroundImage: `url('${modelCityConfig.backgroundImageUrl}')` }}
       />
       {/* Scroll to top on every client-side navigation. */}
       <ScrollToTop />

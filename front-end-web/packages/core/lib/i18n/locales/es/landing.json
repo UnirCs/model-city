@@ -1,9 +1,9 @@
 {
   "landing": {
     "banner": {
-      "badge": "Aranjuez · Patrimonio de la Humanidad UNESCO",
-      "title": "Aranjuez, en un clic",
-      "subtitle": "El Portal Ciudadano de Aranjuez centraliza la agenda cultural, los servicios municipales y la participación ciudadana en un único espacio digital. Trámites, reservas, alertas y mucho más, disponibles las 24 horas desde cualquier dispositivo.",
+      "badge": "{city} · Patrimonio de la Humanidad UNESCO",
+      "title": "{city}, en un clic",
+      "subtitle": "El Portal Ciudadano de {city} centraliza la agenda cultural, los servicios municipales y la participación ciudadana en un único espacio digital. Trámites, reservas, alertas y mucho más, disponibles las 24 horas desde cualquier dispositivo.",
       "cta": "Acceder al portal",
       "fnmtNote": "Además, si tienes un certificado personal emitido por la FNMT en vigor, podrás participar en encuestas ciudadanas."
     },
@@ -23,7 +23,7 @@
       "s6desc": "Parking público y gestión de aparcamiento"
     },
     "footer": {
-      "address": "Plaza de la Constitución, 1 · 28300 Aranjuez, Madrid",
+      "address": "Plaza de la Constitución, 1 · 28300 {city}, Madrid",
       "seat": "Sede Electrónica",
       "legal": "Aviso Legal",
       "cookies": "Política de Cookies",
@@ -37,7 +37,7 @@
     "easyRead": {
       "title": "Lectura fácil",
       "intro": "Esto es lo que puedes hacer en este portal, explicado con palabras sencillas:",
-      "p1": "Aranjuez tiene una página web para sus vecinos y visitantes.",
+      "p1": "{city} tiene una página web para sus vecinos y visitantes.",
       "p2": "Aquí puedes ver eventos, rutas turísticas, alertas, reservar instalaciones y gestionar tu coche.",
       "p3": "Para usarla, pulsa el botón «Acceder al portal» y entra con tu cuenta.",
       "p4": "Si necesitas ayuda, abre la página de Ayuda desde el menú superior una vez hayas entrado."

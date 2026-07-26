@@ -2,7 +2,7 @@
   "security": {
     "alertCenter": {
       "bannerTitle": "Alert Centre",
-      "bannerSubtitle": "Up-to-date information about incidents and safety notices across the Aranjuez municipality.",
+      "bannerSubtitle": "Up-to-date information about incidents and safety notices across the {city} municipality.",
       "mapTitle": "Incident map",
       "expandMap": "Expand map",
       "closeMap": "Close map",

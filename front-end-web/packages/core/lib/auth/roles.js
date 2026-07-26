@@ -21,8 +21,16 @@
  * `auth0.getSession()`) so they can inspect both tokens transparently.
  */
 
-/** Namespaced claim name where Auth0 stores the roles array. */
-export const ROLES_CLAIM = 'https://model-city.aranjuez.es/roles';
+/**
+ * Namespaced claim name where Auth0 stores the roles array.
+ *
+ * Auth0 uses the API audience as the claim namespace, so it is derived from
+ * `AUTH0_AUDIENCE` (the same value {@link auth0} requests) to keep the front-end
+ * tied to the configured tenant, not to a hard-coded city. This is only read
+ * server-side (where the access token is decoded); client bundles that import
+ * {@link ROLES} never evaluate the claim.
+ */
+export const ROLES_CLAIM = `${process.env.AUTH0_AUDIENCE}/roles`;
 
 /** All known platform roles. */
 export const ROLES = Object.freeze({

@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Portail Citoyen · Mairie d'Aranjuez",
+    "title": "Portail Citoyen · Mairie d'{city}",
     "titleTemplate": "%s · Portail Citoyen",
-    "description": "Accédez aux services municipaux, gérez vos démarches et restez informé sur Aranjuez, Patrimoine Mondial."
+    "description": "Accédez aux services municipaux, gérez vos démarches et restez informé sur {city}, Patrimoine Mondial."
   },
   "a11y": {
     "skipToContent": "Aller au contenu principal",
@@ -91,7 +91,7 @@
         },
         {
           "term": "UNESCO",
-          "definition": "Organisation des Nations unies pour l'éducation, la science et la culture. Aranjuez est inscrite au patrimoine mondial de l'UNESCO depuis 2001."
+          "definition": "Organisation des Nations unies pour l'éducation, la science et la culture. {city} est inscrite au patrimoine mondial de l'UNESCO depuis 2001."
         }
       ]
     },
@@ -121,7 +121,7 @@
     }
   },
   "common": {
-    "brand": "Portail citoyen d'Aranjuez",
+    "brand": "Portail citoyen d'{city}",
     "back": "Retour"
   },
   "nav": {
@@ -237,7 +237,7 @@
   "unauthorized": {
     "gateTitle": "Zone à accès restreint",
     "gateSubtitle": "Votre accréditation ne vous permet pas d'accéder à ce district du portail.",
-    "gateBody": "Tout comme certains sites historiques d'Aranjuez nécessitent un laissez-passer spécial, certaines sections du portail sont réservées à un profil d'utilisateur différent du vôtre. Si vous pensez qu'il s'agit d'une erreur, veuillez contacter l'administrateur de la plateforme.",
+    "gateBody": "Tout comme certains sites historiques d'{city} nécessitent un laissez-passer spécial, certaines sections du portail sont réservées à un profil d'utilisateur différent du vôtre. Si vous pensez qu'il s'agit d'une erreur, veuillez contacter l'administrateur de la plateforme.",
     "gateHint": "Les grilles du palais ne s'ouvrent pas pour tout le monde — et cette section non plus.",
     "backHome": "Retourner à la place principale"
   },

@@ -5,14 +5,15 @@ import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import Icon from '@modelcity/core/components/atoms/Icon';
 import { useTranslations } from '@modelcity/core/lib/i18n/TranslationsProvider';
+import modelCityConfig from '@modelcity/config';
 
 /** OpenFreeMap positron — clean minimal style, no API key required. */
 const STYLE_URL = 'https://tiles.openfreemap.org/styles/positron';
 
 const COLOR_SECONDARY = '#13696a';
 
-/** Aranjuez town centre — default centre when no marker is present yet. */
-const DEFAULT_CENTER = { lng: -3.6033, lat: 40.0322 };
+/** City centre — default centre when no marker is present yet. */
+const DEFAULT_CENTER = modelCityConfig.map.center;
 
 /**
  * Creates the teardrop DOM element used as the marker icon.

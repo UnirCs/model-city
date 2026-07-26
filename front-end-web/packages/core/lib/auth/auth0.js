@@ -25,8 +25,9 @@ function extractLang(returnTo) {
 export const auth0 = new Auth0Client({
   authorizationParameters: {
     // Audience registered in Auth0 → the Access Token will be a RS256-signed JWT
-    // that Spring Boot can validate directly against the tenant's JWKS.
-    audience: 'https://model-city.aranjuez.es',
+    // that Spring Boot can validate directly against the tenant's JWKS. Read
+    // from AUTH0_AUDIENCE (the API Identifier), shared with the backend.
+    audience: process.env.AUTH0_AUDIENCE,
     scope: 'openid profile email',
   },
 

@@ -1,9 +1,9 @@
 {
   "landing": {
     "banner": {
-      "badge": "Aranjuez · Patrimoine Mondial UNESCO",
-      "title": "Aranjuez, en un clic",
-      "subtitle": "Le Portail Citoyen d'Aranjuez réunit l'agenda culturel, les services municipaux et la participation citoyenne dans un espace numérique unique. Démarches, réservations, alertes et bien plus encore, disponibles 24h/24 depuis n'importe quel appareil.",
+      "badge": "{city} · Patrimoine Mondial UNESCO",
+      "title": "{city}, en un clic",
+      "subtitle": "Le Portail Citoyen d'{city} réunit l'agenda culturel, les services municipaux et la participation citoyenne dans un espace numérique unique. Démarches, réservations, alertes et bien plus encore, disponibles 24h/24 depuis n'importe quel appareil.",
       "cta": "Accéder au portail",
       "fnmtNote": "De plus, si vous disposez d'un certificat personnel valide émis par la FNMT, vous pouvez également participer aux consultations citoyennes."
     },
@@ -23,7 +23,7 @@
       "s6desc": "Parking public et gestion du stationnement"
     },
     "footer": {
-      "address": "Plaza de la Constitución, 1 · 28300 Aranjuez, Madrid",
+      "address": "Plaza de la Constitución, 1 · 28300 {city}, Madrid",
       "seat": "Bureau Électronique",
       "legal": "Mentions Légales",
       "cookies": "Politique de Cookies",
@@ -37,7 +37,7 @@
     "easyRead": {
       "title": "Lecture facile",
       "intro": "Voici ce que vous pouvez faire sur ce portail, expliqué avec des mots simples :",
-      "p1": "Aranjuez a un site web pour ses habitants et ses visiteurs.",
+      "p1": "{city} a un site web pour ses habitants et ses visiteurs.",
       "p2": "Ici vous pouvez voir les événements, les itinéraires touristiques, les alertes, réserver des installations et gérer votre voiture.",
       "p3": "Pour l'utiliser, cliquez sur le bouton « Accéder au portail » et connectez-vous avec votre compte.",
       "p4": "Si vous avez besoin d'aide, ouvrez la page Aide depuis le menu supérieur une fois connecté."

@@ -6,6 +6,7 @@ import UserMenu from '@modelcity/core/components/molecules/UserMenu';
 import SettingsButton from '@modelcity/core/components/molecules/SettingsButton';
 import Icon from '@modelcity/core/components/atoms/Icon';
 import { getDictionary } from '@modelcity/core/lib/i18n/dictionaries';
+import modelCityConfig from '@modelcity/config';
 
 /**
  * Organism: TopNavBar (authenticated app) — async Server Component
@@ -28,8 +29,8 @@ export default async function TopNavBar({ lang }) {
         {/* Brand with coat of arms */}
         <div className="flex items-center gap-sm shrink-0">
           <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Escudo_de_Aranjuez_%28Madrid%29.svg"
-            alt="coat-of-arms"
+            src={modelCityConfig.coatOfArmsUrl}
+            alt={`${modelCityConfig.cityName} coat of arms`}
             width={40}
             height={40}
             preload={true}

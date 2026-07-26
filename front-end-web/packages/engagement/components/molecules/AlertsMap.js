@@ -6,12 +6,13 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import Icon from '@modelcity/core/components/atoms/Icon';
 import { severityVisual } from '@modelcity/engagement/lib/security/severity';
 import { useTranslations } from '@modelcity/core/lib/i18n/TranslationsProvider';
+import modelCityConfig from '@modelcity/config';
 
 /** OpenFreeMap positron — clean minimal style, no API key required. */
 const STYLE_URL = 'https://tiles.openfreemap.org/styles/positron';
 
-/** Aranjuez town centre — used when no alert is provided. */
-const DEFAULT_CENTER = { lng: -3.6033, lat: 40.0322 };
+/** City centre — used when no alert is provided. */
+const DEFAULT_CENTER = modelCityConfig.map.center;
 
 /** Duration of the expand/collapse CSS transition in ms. */
 const TRANSITION_MS = 300;

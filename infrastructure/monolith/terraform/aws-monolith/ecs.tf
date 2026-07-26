@@ -172,8 +172,6 @@ resource "aws_ecs_task_definition" "frontend" {
       { name = "STRIPE_PARKING_PRODUCT_ID", value = var.stripe_parking_product_id },
       # Gemini server-side API key.
       { name = "GEMINI_API_KEY", value = var.gemini_api_key },
-      # Public background image URL (also embedded at build time; kept here for runtime consistency).
-      { name = "NEXT_PUBLIC_BACKGROUND_IMAGE_URL", value = var.background_image_url },
     ]
     logConfiguration = {
       logDriver = "awslogs"

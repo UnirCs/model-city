@@ -2,7 +2,7 @@
   "security": {
     "alertCenter": {
       "bannerTitle": "Centro de Alertas",
-      "bannerSubtitle": "Información actualizada sobre incidencias y avisos de seguridad en el municipio de Aranjuez.",
+      "bannerSubtitle": "Información actualizada sobre incidencias y avisos de seguridad en el municipio de {city}.",
       "mapTitle": "Mapa de incidencias",
       "expandMap": "Ampliar mapa",
       "closeMap": "Cerrar mapa",

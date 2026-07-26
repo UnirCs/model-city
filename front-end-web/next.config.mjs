@@ -16,7 +16,8 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_MICROSERVICE_ALB_URL:   process.env.MICROSERVICE_ALB_URL   ?? 'https://localhost:8443',
     NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: process.env.STRIPE_PUBLISHABLE_KEY ?? '',
-    NEXT_PUBLIC_BACKGROUND_IMAGE_URL:    process.env.BACKGROUND_IMAGE_URL  ?? 'https://www.spain.info/export/sites/segtur/.content/imagenes/rutas/escapada-aranjuez/palacio-real-aranjuez-s1089121742.jpg',
+    // The authenticated-view backdrop is configured in modelcity.config.js
+    // (backgroundImageUrl), not through an env var.
     // Feature-module toggles (mirror the back-end microservices). Default ON;
     // set to "false" to hide a module from navigation and the home grid and to
     // 404 its routes. See src/lib/config/modules.js.

@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Citizen Portal · Aranjuez City Council",
+    "title": "Citizen Portal · {city} City Council",
     "titleTemplate": "%s · Citizen Portal",
-    "description": "Access municipal services, manage your transactions and stay informed about Aranjuez, World Heritage Site."
+    "description": "Access municipal services, manage your transactions and stay informed about {city}, World Heritage Site."
   },
   "a11y": {
     "skipToContent": "Skip to main content",
@@ -91,7 +91,7 @@
         },
         {
           "term": "UNESCO",
-          "definition": "United Nations Educational, Scientific and Cultural Organization. Aranjuez has been on the UNESCO World Heritage list since 2001."
+          "definition": "United Nations Educational, Scientific and Cultural Organization. {city} has been on the UNESCO World Heritage list since 2001."
         }
       ]
     },
@@ -121,7 +121,7 @@
     }
   },
   "common": {
-    "brand": "Citizen Portal of Aranjuez",
+    "brand": "Citizen Portal of {city}",
     "back": "Back"
   },
   "nav": {
@@ -237,7 +237,7 @@
   "unauthorized": {
     "gateTitle": "Restricted zone",
     "gateSubtitle": "Your credential does not grant entry to this district of the portal.",
-    "gateBody": "Just as some historic precincts in Aranjuez require a special pass, certain sections of the portal are reserved for a different user profile. If you believe this is an error, please contact the platform administrator.",
+    "gateBody": "Just as some historic precincts in {city} require a special pass, certain sections of the portal are reserved for a different user profile. If you believe this is an error, please contact the platform administrator.",
     "gateHint": "The palace gates don't open for everyone — and neither does this section.",
     "backHome": "Return to the main square"
   },

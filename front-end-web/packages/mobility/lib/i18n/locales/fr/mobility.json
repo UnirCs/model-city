@@ -104,7 +104,7 @@
     },
     "mySanctions": {
       "bannerTitle": "Mes amendes",
-      "bannerSubtitle": "Historique des amendes recues a Aranjuez. Cliquez sur une amende pour voir la preuve photo.",
+      "bannerSubtitle": "Historique des amendes recues a {city}. Cliquez sur une amende pour voir la preuve photo.",
       "sectionTitle": "Amendes reçues",
       "empty": "Aucune amende enregistree.",
       "loadError": "Impossible de charger les amendes. Reessayez plus tard.",

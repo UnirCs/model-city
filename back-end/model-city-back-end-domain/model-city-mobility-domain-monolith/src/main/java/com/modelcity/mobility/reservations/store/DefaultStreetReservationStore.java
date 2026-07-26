@@ -5,6 +5,8 @@ import com.modelcity.mobility.reservations.repository.StreetReservationSpecs;
 import com.modelcity.mobility.reservations.repository.model.ReservationStatus;
 import com.modelcity.mobility.reservations.repository.model.StreetReservation;
 import com.modelcity.common.extensibility.ModelCityDisabledIfInherited;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -32,6 +34,9 @@ import java.util.Optional;
 public class DefaultStreetReservationStore implements StreetReservationStore<StreetReservation> {
 
     protected final StreetReservationRepository<StreetReservation> streetReservationRepository;
+
+    @PersistenceContext
+    protected EntityManager entityManager;
 
     @Override
     public Optional<StreetReservation> findById(Long id) {
@@ -71,7 +76,11 @@ public class DefaultStreetReservationStore implements StreetReservationStore<Str
                 .pricePaid(price)
                 .status(ReservationStatus.PENDING)
                 .build();
-        return streetReservationRepository.save(reservation);
+        StreetReservation saved = streetReservationRepository.save(reservation);
+        // The insertable/updatable=false shadow @ManyToOne navigations (car, user) are only hydrated by
+        // Hibernate on load, not right after an INSERT — refresh so the returned view exposes them.
+        entityManager.refresh(saved);
+        return saved;
     }
 
     @Override

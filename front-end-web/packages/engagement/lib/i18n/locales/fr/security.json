@@ -2,7 +2,7 @@
   "security": {
     "alertCenter": {
       "bannerTitle": "Centre d'alertes",
-      "bannerSubtitle": "Informations à jour sur les incidents et les avis de sécurité dans la commune d'Aranjuez.",
+      "bannerSubtitle": "Informations à jour sur les incidents et les avis de sécurité dans la commune d'{city}.",
       "mapTitle": "Carte des incidents",
       "expandMap": "Agrandir la carte",
       "closeMap": "Fermer la carte",

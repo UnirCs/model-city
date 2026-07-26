@@ -19,7 +19,6 @@ FROM base AS builder
 # next.config.mjs maps these to NEXT_PUBLIC_* so no code changes are needed.
 ARG MICROSERVICE_ALB_URL
 ARG STRIPE_PUBLISHABLE_KEY
-ARG BACKGROUND_IMAGE_URL
 # Feature-module toggles (default "true" when the build-arg is omitted).
 ARG MODULE_LEISURE=true
 ARG MODULE_ENGAGEMENT=true
@@ -27,13 +26,14 @@ ARG MODULE_MOBILITY=true
 
 ENV MICROSERVICE_ALB_URL=$MICROSERVICE_ALB_URL
 ENV STRIPE_PUBLISHABLE_KEY=$STRIPE_PUBLISHABLE_KEY
-ENV BACKGROUND_IMAGE_URL=${BACKGROUND_IMAGE_URL:-https://www.spain.info/export/sites/segtur/.content/imagenes/rutas/escapada-aranjuez/palacio-real-aranjuez-s1089121742.jpg}
 ENV MODULE_LEISURE=$MODULE_LEISURE
 ENV MODULE_ENGAGEMENT=$MODULE_ENGAGEMENT
 ENV MODULE_MOBILITY=$MODULE_MOBILITY
 
 COPY --from=deps /app/node_modules ./node_modules
-COPY package.json next.config.mjs jsconfig.json postcss.config.mjs modules.config.mjs eslint.config.mjs ./
+# modelcity.config.js carries the city presentation/reference config (branding
+# assets, landing artwork, map focus, neighbourhoods) consumed via @modelcity/config.
+COPY package.json next.config.mjs jsconfig.json postcss.config.mjs modules.config.mjs modelcity.config.js eslint.config.mjs ./
 COPY public ./public
 COPY overrides ./overrides
 COPY src ./src
@@ -49,10 +49,6 @@ ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
-
-# Background image URL exposed at runtime (ECS can override it).
-ARG BACKGROUND_IMAGE_URL
-ENV NEXT_PUBLIC_BACKGROUND_IMAGE_URL=${BACKGROUND_IMAGE_URL:-https://www.spain.info/export/sites/segtur/.content/imagenes/rutas/escapada-aranjuez/palacio-real-aranjuez-s1089121742.jpg}
 
 RUN groupadd --system --gid 1001 nodejs \
   && useradd --system --uid 1001 --gid nodejs nextjs

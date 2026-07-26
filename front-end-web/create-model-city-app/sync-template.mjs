@@ -6,9 +6,10 @@
  * at build time. Runs on `prepack`, so every published tarball carries a
  * template that matches the release it ships with.
  *
- * Verbatim copies: next/postcss/eslint configs, `public/`, the app favicons
- * and the reference root package.json (kept as `base-package.json`, the
- * source of the peer-stack versions at scaffold time).
+ * Verbatim copies: next/postcss/eslint configs, `modelcity.config.js` (the
+ * city presentation/reference config a city then customises), `public/`, the
+ * app favicons and the reference root package.json (kept as
+ * `base-package.json`, the source of the peer-stack versions at scaffold time).
  *
  * Transformed copies:
  *   - `jsconfig.json`: the `@modelcity/*` paths fallback is rewritten from the
@@ -30,7 +31,7 @@ rmSync(SYNCED, { recursive: true, force: true });
 mkdirSync(join(SYNCED, 'src', 'app'), { recursive: true });
 
 // ── Verbatim project files ──────────────────────────────────────────────────
-for (const file of ['next.config.mjs', 'postcss.config.mjs', 'eslint.config.mjs']) {
+for (const file of ['next.config.mjs', 'postcss.config.mjs', 'eslint.config.mjs', 'modelcity.config.js']) {
   cpSync(join(REFERENCE, file), join(SYNCED, file));
 }
 cpSync(join(REFERENCE, 'public'), join(SYNCED, 'public'), { recursive: true });

@@ -1,9 +1,9 @@
 {
   "landing": {
     "banner": {
-      "badge": "Aranjuez · UNESCO World Heritage",
-      "title": "Aranjuez, in one click",
-      "subtitle": "The Aranjuez Citizen Portal brings together the cultural agenda, municipal services and citizen participation in a single digital space. Transactions, bookings, alerts and much more, available 24 hours a day from any device.",
+      "badge": "{city} · UNESCO World Heritage",
+      "title": "{city}, in one click",
+      "subtitle": "The {city} Citizen Portal brings together the cultural agenda, municipal services and citizen participation in a single digital space. Transactions, bookings, alerts and much more, available 24 hours a day from any device.",
       "cta": "Access the portal",
       "fnmtNote": "Plus, if you hold a valid personal certificate issued by the FNMT, you can also take part in civic consultations."
     },
@@ -23,7 +23,7 @@
       "s6desc": "Public parking and parking management"
     },
     "footer": {
-      "address": "Plaza de la Constitución, 1 · 28300 Aranjuez, Madrid",
+      "address": "Plaza de la Constitución, 1 · 28300 {city}, Madrid",
       "seat": "Electronic Office",
       "legal": "Legal Notice",
       "cookies": "Cookie Policy",
@@ -37,7 +37,7 @@
     "easyRead": {
       "title": "Easy read",
       "intro": "This is what you can do on this portal, explained with simple words:",
-      "p1": "Aranjuez has a website for its residents and visitors.",
+      "p1": "{city} has a website for its residents and visitors.",
       "p2": "Here you can see events, tourist routes, alerts, book facilities and manage your car.",
       "p3": "To use it, click the «Access the portal» button and sign in with your account.",
       "p4": "If you need help, open the Help page from the top menu once you have signed in."

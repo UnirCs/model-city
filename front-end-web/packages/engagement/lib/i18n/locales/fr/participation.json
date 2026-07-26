@@ -2,7 +2,7 @@
   "participation": {
     "questions": {
       "bannerTitle": "Explorateur de Consultations",
-      "bannerSubtitle": "Votre voix construit l'avenir d'Aranjuez. Participez aux décisions qui affectent votre quartier et notre ville du patrimoine.",
+      "bannerSubtitle": "Votre voix construit l'avenir d'{city}. Participez aux décisions qui affectent votre quartier et notre ville du patrimoine.",
       "sectionActive": "Consultations Actives",
       "sectionUpcoming": "Consultations à Venir",
       "sectionFinished": "Consultations Terminées",

@@ -9,7 +9,7 @@
     "services": {
       "eventos": {
         "title": "Eventos Culturales",
-        "description": "Descubre la agenda cultural de Aranjuez. Teatro, conciertos, exposiciones y actividades para todos los públicos."
+        "description": "Descubre la agenda cultural de {city}. Teatro, conciertos, exposiciones y actividades para todos los públicos."
       },
       "turismo": {
         "title": "Guías de Turismo",

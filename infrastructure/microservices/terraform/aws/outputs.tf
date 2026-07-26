@@ -20,11 +20,6 @@ output "stripe_publishable_key" {
   value       = var.stripe_publishable_key
 }
 
-output "background_image_url" {
-  description = "Background image URL baked into the Next.js frontend bundle."
-  value       = var.background_image_url
-}
-
 output "ecr_repository_urls" {
   description = "ECR repo URLs to push images to."
   value       = { for k, r in aws_ecr_repository.this : k => r.repository_url }

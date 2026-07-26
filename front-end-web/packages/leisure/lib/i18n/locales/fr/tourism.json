@@ -2,7 +2,7 @@
   "tourism": {
     "routes": {
       "bannerTitle": "Itinéraires Touristiques",
-      "bannerSubtitle": "Découvrez la beauté architecturale et naturelle d'Aranjuez à travers nos itinéraires recommandés. Sélectionnez un parcours pour voir les détails, les points d'intérêt et les options de navigation guidée.",
+      "bannerSubtitle": "Découvrez la beauté architecturale et naturelle d'{city} à travers nos itinéraires recommandés. Sélectionnez un parcours pour voir les détails, les points d'intérêt et les options de navigation guidée.",
       "sectionTitle": "Itinéraires disponibles",
       "placeCount": "{count} lieux",
       "viewDetails": "Voir les détails",
@@ -67,7 +67,7 @@
     },
     "locations": {
       "bannerTitle": "Sites",
-      "bannerSubtitle": "Explorez les sites d'intérêt d'Aranjuez : monuments, jardins, musées et plus encore. Filtrez par catégorie et découvrez chaque recoin de cette ville classée au Patrimoine mondial.",
+      "bannerSubtitle": "Explorez les sites d'intérêt d'{city} : monuments, jardins, musées et plus encore. Filtrez par catégorie et découvrez chaque recoin de cette ville classée au Patrimoine mondial.",
       "filterAll": "Tous",
       "filterTitle": "Filtrer les sites",
       "typeLabel": "Type de site",

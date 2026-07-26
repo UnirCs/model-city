@@ -2,7 +2,7 @@
   "participation": {
     "questions": {
       "bannerTitle": "Explorador de Consultas",
-      "bannerSubtitle": "Tu voz construye el futuro de Aranjuez. Participa en las decisiones que afectan a tu barrio y a nuestra ciudad patrimonio.",
+      "bannerSubtitle": "Tu voz construye el futuro de {city}. Participa en las decisiones que afectan a tu barrio y a nuestra ciudad patrimonio.",
       "sectionActive": "Consultas Activas",
       "sectionUpcoming": "Próximas Consultas",
       "sectionFinished": "Consultas Finalizadas",

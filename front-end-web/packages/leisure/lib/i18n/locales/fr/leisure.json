@@ -159,7 +159,7 @@
     },
     "events": {
       "bannerTitle": "Événements de la ville",
-      "bannerSubtitle": "Concerts, spectacles, activités en plein air et bien plus. Découvrez les prochains événements à Aranjuez et obtenez votre billet en quelques clics.",
+      "bannerSubtitle": "Concerts, spectacles, activités en plein air et bien plus. Découvrez les prochains événements à {city} et obtenez votre billet en quelques clics.",
       "sectionTitle": "Événements actifs",
       "viewEvent": "Voir l'événement",
       "viewDetails": "Voir les détails",

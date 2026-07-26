@@ -2,6 +2,7 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
+      "@modelcity/config": ["./modelcity.config.js"],
       "@modelcity/core/*": ["./overrides/core/*", "./packages/core/*"],
       "@modelcity/leisure/*": ["./overrides/leisure/*", "./packages/leisure/*"],
       "@modelcity/engagement/*": ["./overrides/engagement/*", "./packages/engagement/*"],

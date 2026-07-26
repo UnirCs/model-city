@@ -1,6 +1,6 @@
 {
   "registration": {
-    "brand": "Ayuntamiento de Aranjuez",
+    "brand": "Ayuntamiento de {city}",
     "heading": "Completa tu registro",
     "subtitle": "Antes de acceder al portal necesitamos unos datos adicionales para identificarte como ciudadano o ciudadana del municipio.",
     "emailLabel": "Correo electrónico",

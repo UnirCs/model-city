@@ -2,7 +2,7 @@
   "tourism": {
     "routes": {
       "bannerTitle": "Recorridos Turísticos",
-      "bannerSubtitle": "Descubre la belleza arquitectónica y natural de Aranjuez a través de nuestras rutas recomendadas. Selecciona un recorrido para ver detalles, puntos de interés y opciones de navegación guiada.",
+      "bannerSubtitle": "Descubre la belleza arquitectónica y natural de {city} a través de nuestras rutas recomendadas. Selecciona un recorrido para ver detalles, puntos de interés y opciones de navegación guiada.",
       "sectionTitle": "Rutas disponibles",
       "placeCount": "{count} lugares",
       "viewDetails": "Ver detalles",
@@ -67,7 +67,7 @@
     },
     "locations": {
       "bannerTitle": "Ubicaciones",
-      "bannerSubtitle": "Explora los lugares de interés de Aranjuez: monumentos, jardines, museos y más. Filtra por categoría y descubre cada rincón del municipio Patrimonio de la Humanidad.",
+      "bannerSubtitle": "Explora los lugares de interés de {city}: monumentos, jardines, museos y más. Filtra por categoría y descubre cada rincón del municipio Patrimonio de la Humanidad.",
       "filterAll": "Todos",
       "filterTitle": "Filtrar ubicaciones",
       "typeLabel": "Tipo de ubicación",

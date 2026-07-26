@@ -245,13 +245,6 @@ variable "stripe_publishable_key" {
   default     = ""
 }
 
-# Background image URL for the frontend
-variable "background_image_url" {
-  description = "URL of the background image for the frontend. Embedded in the frontend bundle at build time."
-  type        = string
-  default     = "https://www.spain.info/export/sites/segtur/.content/imagenes/rutas/escapada-aranjuez/palacio-real-aranjuez-s1089121742.jpg"
-}
-
 # Frontend (Next.js) — session encryption secret (openssl rand -base64 32)
 variable "nextauth_secret" {
   description = "Auth0/NextAuth secret for session encryption. Generate with: openssl rand -base64 32"

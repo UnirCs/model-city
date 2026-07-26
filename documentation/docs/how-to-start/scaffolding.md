@@ -56,6 +56,10 @@ npm create model-city-app@latest my-city -- --modules=leisure,mobility --yes
   `qrcode.react` for `leisure`) are included only when that module is contracted.
 - **`modules.config.mjs`** — the city's declaration of contracted modules and the
   single source of truth for the build-time codegen (`modelcity gen`).
+- **`modelcity.config.js`** — the city's presentation/reference config (city
+  name, coat of arms, the authenticated-view backdrop, the landing photos, the
+  default map focus and the neighbourhood catalogue). Platform components import
+  it via the `@modelcity/config` alias; edit this file to rebrand the portal.
 - Project wiring derived from the platform reference app at publish time:
   `next.config.mjs`, `postcss.config.mjs` (Tailwind v4), `eslint.config.mjs`,
   `jsconfig.json` (with the `overrides/` fallback), `public/` and `.gitignore`.

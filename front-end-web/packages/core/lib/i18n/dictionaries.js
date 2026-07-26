@@ -1,8 +1,52 @@
+import modelCityConfig from '@modelcity/config';
+
 /** Supported language codes. */
 export const SUPPORTED_LANGS = ['es', 'en', 'fr'];
 
 /** Default language when no preference is detected. */
 export const DEFAULT_LANG = 'es';
+
+/**
+ * City-name interpolation.
+ *
+ * Locale strings reference the city with the `{city}` token instead of a
+ * hard-coded name; here it is replaced by `modelCityConfig.cityName`, so a city
+ * rebrands the whole portal copy from one place. This runs in `getDictionary`
+ * — the single path every server render (and, via `TranslationsProvider`, every
+ * client component) reads dictionaries through — so no call site changes.
+ *
+ * @param {unknown} value
+ * @returns {unknown} a copy with every `{city}` token resolved
+ */
+function resolveCityTokens(value) {
+  if (typeof value === 'string') {
+    return value.includes('{city}')
+      ? value.replaceAll('{city}', modelCityConfig.cityName)
+      : value;
+  }
+  if (Array.isArray(value)) return value.map(resolveCityTokens);
+  if (value && typeof value === 'object') {
+    const out = {};
+    for (const [key, val] of Object.entries(value)) out[key] = resolveCityTokens(val);
+    return out;
+  }
+  return value;
+}
+
+/**
+ * Memoised {@link resolveCityTokens}, keyed by the source dictionary object.
+ * Each locale JSON is a stable module reference, so the resolved copy is built
+ * once and reused across renders.
+ */
+const resolvedDicts = new WeakMap();
+function withCity(dict) {
+  let resolved = resolvedDicts.get(dict);
+  if (!resolved) {
+    resolved = resolveCityTokens(dict);
+    resolvedDicts.set(dict, resolved);
+  }
+  return resolved;
+}
 
 /**
  * Dynamic loaders for the shared/common dictionary — one per locale.
@@ -95,13 +139,13 @@ export function registerServiceLoaders(byLang) {
  */
 export async function getDictionary(lang, service) {
   const safeLang = SUPPORTED_LANGS.includes(lang) ? lang : DEFAULT_LANG;
-  const common = await commonLoaders[safeLang]();
+  const common = withCity(await commonLoaders[safeLang]());
 
   if (!service) return common;
 
   const loader = serviceLoaders[safeLang]?.[service];
   if (!loader) return common;
 
-  const serviceDict = await loader();
+  const serviceDict = withCity(await loader());
   return { ...common, ...serviceDict };
 }

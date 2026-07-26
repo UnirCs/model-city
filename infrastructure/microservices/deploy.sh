@@ -424,12 +424,11 @@ build_and_push_frontend() {
   # next.config.mjs maps MICROSERVICE_ALB_URL → NEXT_PUBLIC_MICROSERVICE_ALB_URL
   # and STRIPE_PUBLISHABLE_KEY → NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY internally,
   # so all external env var names are uniform (no NEXT_PUBLIC_ prefix).
-  local DOMAIN STRIPE_PK BACKGROUND_IMAGE_URL
+  local DOMAIN STRIPE_PK
 
   cd "$TERRAFORM_DIR"
   DOMAIN=$(terraform output -raw domain 2>/dev/null || echo "")
   STRIPE_PK=$(terraform output -raw stripe_publishable_key 2>/dev/null || echo "")
-  BACKGROUND_IMAGE_URL=$(terraform output -raw background_image_url 2>/dev/null || echo "")
   cd - > /dev/null
 
   if [[ -z "$DOMAIN" ]]; then
@@ -448,7 +447,6 @@ build_and_push_frontend() {
   log_info "Build args:"
   echo "  MICROSERVICE_ALB_URL=$MICROSERVICE_ALB_URL"
   echo "  STRIPE_PUBLISHABLE_KEY=${STRIPE_PK:-(empty)}"
-  echo "  BACKGROUND_IMAGE_URL=${BACKGROUND_IMAGE_URL:-(empty)}"
   echo
 
   log_info "Logging in to ECR ($REGISTRY)"
@@ -460,7 +458,6 @@ build_and_push_frontend() {
   docker build --platform=linux/amd64 \
     --build-arg MICROSERVICE_ALB_URL="$MICROSERVICE_ALB_URL" \
     --build-arg STRIPE_PUBLISHABLE_KEY="${STRIPE_PK}" \
-    --build-arg BACKGROUND_IMAGE_URL="${BACKGROUND_IMAGE_URL}" \
     -t "$IMAGE" \
     "$FRONTEND_DIR" || die "Failed to build frontend Docker image"
 

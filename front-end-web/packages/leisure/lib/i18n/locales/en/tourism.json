@@ -2,7 +2,7 @@
   "tourism": {
     "routes": {
       "bannerTitle": "Tourist Routes",
-      "bannerSubtitle": "Discover the architectural and natural beauty of Aranjuez through our recommended routes. Select a tour to see details, points of interest and guided navigation options.",
+      "bannerSubtitle": "Discover the architectural and natural beauty of {city} through our recommended routes. Select a tour to see details, points of interest and guided navigation options.",
       "sectionTitle": "Available routes",
       "placeCount": "{count} places",
       "viewDetails": "View details",
@@ -67,7 +67,7 @@
     },
     "locations": {
       "bannerTitle": "Locations",
-      "bannerSubtitle": "Explore Aranjuez's points of interest: monuments, gardens, museums and more. Filter by category and discover every corner of this World Heritage town.",
+      "bannerSubtitle": "Explore {city}'s points of interest: monuments, gardens, museums and more. Filter by category and discover every corner of this World Heritage town.",
       "filterAll": "All",
       "filterTitle": "Filter locations",
       "typeLabel": "Location type",
