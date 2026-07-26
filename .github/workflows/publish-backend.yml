@@ -1,0 +1,63 @@
+# Publishes the back-end release train (`io.github.unircs:*` domain modules +
+# both archetypes) to Maven Central when a `backend-v*` tag is pushed.
+#
+# Auth: Central Publisher Portal user token (long-lived secret), not OIDC —
+# Sonatype Central does not support GitHub Trusted Publishing for Maven yet.
+# Artifacts are signed with a GPG key imported at runtime from a secret.
+#
+# Prerequisites (repo secrets):
+#   - CENTRAL_USERNAME / CENTRAL_PASSWORD: the "central" server user token
+#     (same one used locally in ~/.m2/settings.xml).
+#   - GPG_PRIVATE_KEY: ASCII-armored secret key export
+#     (`gpg --export-secret-keys --armor <keyId> | pbcopy`).
+#   - GPG_PASSPHRASE: passphrase protecting that key.
+#   - Version bumped beforehand with
+#     `mvn versions:set -DnewVersion=<version> -DprocessAllModules=true -DgenerateBackupPoms=false`
+#     (run from back-end/), which the tag-consistency step enforces.
+name: publish-backend
+
+on:
+  push:
+    tags:
+      - 'backend-v*'
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: back-end
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK and Maven settings.xml
+        uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+          server-id: central
+          server-username: CENTRAL_USERNAME
+          server-password: CENTRAL_PASSWORD
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg-passphrase: GPG_PASSPHRASE
+
+      - name: Check the tag matches the reactor version
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#backend-v}"
+          POM_VERSION="$(mvn -q help:evaluate -Dexpression=project.version -DforceStdout)"
+          if [ "$TAG_VERSION" != "$POM_VERSION" ]; then
+            echo "Tag backend-v$TAG_VERSION does not match POM version $POM_VERSION" >&2
+            exit 1
+          fi
+
+      # Publishes with autoPublish=true (see back-end/pom.xml release profile);
+      # override with -Dcentral.autoPublish=false to stage without publishing.
+      - name: Build, sign and deploy to Maven Central
+        run: mvn clean deploy -P release
+        env:
+          CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
+          CENTRAL_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
