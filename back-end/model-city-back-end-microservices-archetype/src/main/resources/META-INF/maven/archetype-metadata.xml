@@ -13,7 +13,7 @@
         </requiredProperty>
         <!-- Version of the Model City platform (*-domain / commons) the city project depends on. -->
         <requiredProperty key="modelcityVersion">
-            <defaultValue>1.0.2</defaultValue>
+            <defaultValue>1.0.3</defaultValue>
         </requiredProperty>
         <!-- Branding / config values substituted into the generated README. Set these same values
              as env vars at runtime: AUTH0_AUDIENCE, MAIL_CITY_NAME, MAIL_ADDRESS. -->

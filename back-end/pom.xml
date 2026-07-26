@@ -8,7 +8,7 @@
   </parent>
   <groupId>io.github.unircs</groupId>
   <artifactId>model-city-starter-parent</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>pom</packaging>
   <name>model-city-starter-parent</name>
   <description>Model City — an extensible smart-city back-end platform for municipalities</description>
@@ -43,7 +43,7 @@
     <java.version>25</java.version>
     <spring-cloud.version>2025.1.1</spring-cloud.version>
     <archunit.version>1.4.1</archunit.version>
-    <central.autoPublish>false</central.autoPublish>
+    <central.autoPublish>true</central.autoPublish>
   </properties>
   <dependencyManagement>
     <dependencies>

@@ -7,7 +7,7 @@
     <parent>
         <groupId>io.github.unircs</groupId>
         <artifactId>model-city-starter-parent</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </parent>
 
     <artifactId>model-city-back-end-microservices-archetype</artifactId>
@@ -37,6 +37,13 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-archetype-plugin</artifactId>
                 <version>3.4.1</version>
+                <configuration>
+                    <!-- The IT only needs to verify the generated project compiles; running its
+                         tests would require a real Auth0 tenant, Postgres, SMTP and Stripe account. -->
+                    <properties>
+                        <skipTests>true</skipTests>
+                    </properties>
+                </configuration>
             </plugin>
         </plugins>
     </build>
