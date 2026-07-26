@@ -1,6 +1,6 @@
 {
   "name": "@modelcity/cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Build-time codegen CLI for Model City front-end projects: emits route shims, the composition root and the Tailwind source manifest for the modules selected in modules.config.mjs.",
   "license": "MIT",
   "type": "module",
