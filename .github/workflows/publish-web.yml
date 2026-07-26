@@ -14,6 +14,7 @@
 #   - Versions bumped beforehand with `node scripts/release.mjs <version>`
 #     (run from front-end-web/), which the tag-consistency step enforces.
 name: publish-web
+run-name: ${{ github.event.head_commit.message || github.ref_name }}
 
 on:
   push:

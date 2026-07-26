@@ -15,6 +15,7 @@
 #     `mvn versions:set -DnewVersion=<version> -DprocessAllModules=true -DgenerateBackupPoms=false`
 #     (run from back-end/), which the tag-consistency step enforces.
 name: publish-backend
+run-name: ${{ github.event.head_commit.message || github.ref_name }}
 
 on:
   push:
