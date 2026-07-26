@@ -1,6 +1,6 @@
 {
   "name": "@modelcity/engagement",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Citizen-engagement feature module: participation (consultations) and security (alerts).",
   "license": "MIT",
   "repository": {
@@ -15,7 +15,7 @@
     "**/*.css"
   ],
   "dependencies": {
-    "@modelcity/core": "1.0.6"
+    "@modelcity/core": "1.0.7"
   },
   "peerDependencies": {
     "next": "^16.2.6",

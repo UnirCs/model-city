@@ -47,11 +47,14 @@ const contributors = [];
 /**
  * Registers a feature module's navigation contributor. Called once per active
  * module at startup; the registration order is the display order of that
- * module's sections.
+ * module's sections. Idempotent: registering the same contributor function
+ * more than once (e.g. the composition root re-running within the same
+ * process) is a no-op after the first call.
  *
  * @param {NavContributor} contributor
  */
 export function registerNavContributor(contributor) {
+  if (contributors.includes(contributor)) return;
   contributors.push(contributor);
 }
 

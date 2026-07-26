@@ -1,6 +1,6 @@
 {
   "name": "@modelcity/leisure",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Leisure feature module: events, sports spaces and tourism.",
   "license": "MIT",
   "repository": {
@@ -15,7 +15,7 @@
     "**/*.css"
   ],
   "dependencies": {
-    "@modelcity/core": "1.0.6"
+    "@modelcity/core": "1.0.7"
   },
   "peerDependencies": {
     "next": "^16.2.6",

@@ -1,6 +1,6 @@
 {
   "name": "@modelcity/core",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Always-on shared library: scaffolding, auth, i18n engine, navigation, API clients, design-system core components.",
   "license": "MIT",
   "repository": {
