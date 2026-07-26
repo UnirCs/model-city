@@ -1,0 +1,67 @@
+server:
+  port: ${PORT:8090}
+
+spring:
+  config:
+    import:
+      - optional:classpath:modelcity-shared.yml
+      - optional:classpath:modelcity-eureka.yml
+  application:
+    name: core
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/modelcity-core}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: ${JPA_DDL_AUTO:validate}
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  flyway:
+    enabled: ${FLYWAY_ENABLED:true}
+    baseline-on-migrate: true
+    baseline-version: 0
+    locations: classpath:db/migration
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+auth0:
+  domain: ${AUTH0_DOMAIN}
+  management:
+    client-id: ${AUTH0_MGMT_CLIENT_ID}
+    client-secret: ${AUTH0_MGMT_CLIENT_SECRET}
+    db-connection: ${AUTH0_DB_CONNECTION}
+    backoffice-role-id: ${AUTH0_BACKOFFICE_ROLE_ID}
+    operator-role-id: ${AUTH0_OPERATOR_ROLE_ID}
+    mobility-agent-role-id: ${AUTH0_MOBILITY_AGENT_ROLE_ID}
+
+certificate:
+  verification:
+    dni-pepper: ${CERT_DNI_PEPPER}
+    token-secret: ${CERT_TOKEN_SECRET}
+    token-ttl-seconds: ${CERT_TOKEN_TTL_SECONDS:300}
+
+mail:
+  commons:
+    city: ${MAIL_CITY_NAME} # Change this to your city name, this is an example
+    address: ${MAIL_ADDRESS} # Change this to your city name, this is an example
+  invitation:
+    template:
+      resource: ${INVITATION_MAIL_TEMPLATE_RESOURCE:templates/mail/invitation.html}
+  otp:
+    template:
+      resource: ${OTP_MAIL_TEMPLATE_RESOURCE:templates/mail/otp.html}

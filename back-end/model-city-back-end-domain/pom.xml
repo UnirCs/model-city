@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.unircs</groupId>
+        <artifactId>model-city-starter-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>model-city-back-end-domain</artifactId>
+    <packaging>pom</packaging>
+    <name>model-city-back-end-domain</name>
+    <description>Aggregator for shared domain modules and commons</description>
+
+    <modules>
+        <module>model-city-commons</module>
+        <module>model-city-engagement-domain</module>
+        <module>model-city-engagement-domain-microservices</module>
+        <module>model-city-engagement-domain-monolith</module>
+        <module>model-city-core-domain</module>
+        <module>model-city-mobility-domain</module>
+        <module>model-city-mobility-domain-microservices</module>
+        <module>model-city-mobility-domain-monolith</module>
+        <module>model-city-leisure-domain</module>
+        <module>model-city-leisure-domain-microservices</module>
+        <module>model-city-leisure-domain-monolith</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <!-- Aggregator POM: build the modules but do not publish this POM to Central -->
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <configuration>
+                    <skipPublishing>true</skipPublishing>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

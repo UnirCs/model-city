@@ -1,0 +1,8 @@
+com.modelcity.common.config.WebClientConfig
+com.modelcity.common.config.ModelCityExceptionAutoConfiguration
+com.modelcity.common.config.ModelCityAccessAutoConfiguration
+com.modelcity.common.config.ModelCityCacheAutoConfiguration
+com.modelcity.common.config.ModelCityObservabilityAutoConfiguration
+com.modelcity.common.config.ModelCityI18nAutoConfiguration
+com.modelcity.common.config.ModelCityExtensibilityAutoConfiguration
+com.modelcity.common.config.XAuthSubFilterReactiveAutoConfiguration

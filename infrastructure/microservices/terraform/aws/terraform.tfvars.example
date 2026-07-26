@@ -1,0 +1,44 @@
+# Copy this file to terraform.tfvars and fill in your values.
+# NEVER commit terraform.tfvars: it holds secrets (it is gitignored).
+
+# --- Required (no defaults) ---
+db_password            = "change-me"
+acm_certificate_arn    = "arn:aws:acm:us-east-1:000000000000:certificate/e76c1311ab93485df042361e14aa9c63"
+mtls_trust_bundle_path = "../../../resources/fnmt-client-trust-bundle.pem"
+backend_project_dir    = "backend-absolute-dir"
+frontend_project_dir   = "frontend-absolute-dir"
+
+# --- Common overrides (defaults shown) ---
+aws_region       = "us-east-1"
+domain           = "model-city.example.org"
+auth0_domain     = "auth0-example.eu.auth0.com"
+auth0_audience   = "https://model-city.example.es"
+
+# --- Backend runtime config (defaults shown; override per city) ---
+auth0_db_connection = "Username-Password-Authentication"
+mail_host           = "smtp.gmail.com"
+mail_port           = "587"
+mail_city_name      = "Ayuntamiento de Model City"
+mail_address        = "Plaza Mayor, 1. 00000 Model City"
+
+# --- Secrets / integrations (optional; leave empty to skip the feature) ---
+auth0_mgmt_client_id     = ""
+auth0_mgmt_client_secret = ""
+auth0_client_id          = ""
+auth0_client_secret      = ""
+mail_username            = ""
+mail_password            = ""
+stripe_secret_key        = ""
+stripe_publishable_key   = ""
+stripe_webhook_secret_leisure  = ""
+stripe_webhook_secret_mobility = ""
+stripe_parking_product_id      = ""
+nextauth_secret          = ""
+gemini_api_key           = ""
+
+# --- Auth0 role IDs & certificate secrets (needed for back-office invites and certificate flows) ---
+auth0_backoffice_role_id     = ""
+auth0_operator_role_id       = ""
+auth0_mobility_agent_role_id = ""
+cert_dni_pepper              = ""
+cert_token_secret            = ""

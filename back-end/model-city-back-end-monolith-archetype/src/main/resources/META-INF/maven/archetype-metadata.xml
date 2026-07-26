@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+                      name="model-city-back-end-monolith">
+
+    <requiredProperties>
+        <requiredProperty key="cityName">
+            <defaultValue>Example City</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="cityKey">
+            <defaultValue>examplecity</defaultValue>
+        </requiredProperty>
+        <!-- Version of the Model City platform (*-domain / commons) the city project depends on. -->
+        <requiredProperty key="modelcityVersion">
+            <defaultValue>1.0.0-SNAPSHOT</defaultValue>
+        </requiredProperty>
+        <!-- Branding / config values substituted into the generated README. Set these same values
+             as env vars at runtime: AUTH0_AUDIENCE, MAIL_CITY_NAME, MAIL_ADDRESS. -->
+        <requiredProperty key="auth0Audience">
+            <defaultValue>https://model-city.example.org</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="mailCityName">
+            <defaultValue>Ayuntamiento de Example City</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="mailAddress">
+            <defaultValue>Plaza Mayor, 1. 00000 Example City.</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
+    <fileSets>
+        <!-- Templated files: the pom and README carry Velocity variables
+             (${groupId}/${artifactId}/${version}/${modelcityVersion}/${cityName}/...).
+             Maven property references not defined as archetype variables pass through literally. -->
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>**/pom.xml</include>
+                <include>**/*.md</include>
+            </includes>
+        </fileSet>
+        <!-- Everything else (sources, yml, sql, html, Dockerfile, shell scripts, terraform)
+             is copied verbatim. Spring ${ENV:default} placeholders survive untouched.
+             These files ship inside the archetype with neutral placeholders already in place. -->
+        <fileSet filtered="false" encoding="UTF-8">
+            <directory></directory>
+            <excludes>
+                <exclude>**/pom.xml</exclude>
+                <exclude>**/*.md</exclude>
+            </excludes>
+        </fileSet>
+    </fileSets>
+
+</archetype-descriptor>

@@ -1,0 +1,35 @@
+server:
+  port: ${PORT:8093}
+
+spring:
+  config:
+    import:
+      - optional:classpath:modelcity-shared.yml
+      - optional:classpath:modelcity-eureka.yml
+  application:
+    name: leisure
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/modelcity-leisure}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: ${JPA_DDL_AUTO:validate}
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    open-in-view: false
+  flyway:
+    enabled: ${FLYWAY_ENABLED:true}
+    baseline-on-migrate: true
+    baseline-version: 0
+    locations: classpath:db/migration
+
+leisure:
+  stripe:
+    secret-key: ${STRIPE_SECRET_KEY}
+    webhook-secret: ${STRIPE_WEBHOOK_SECRET}
+    default-currency: eur

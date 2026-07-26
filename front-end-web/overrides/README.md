@@ -28,4 +28,4 @@ default/named exports for a component or helper, same shape for a JSON
 dictionary). Override the smallest file that isolates your change.
 
 Full design, contract, and edge cases:
-[`docs/architecture/route-overrides.md`](../docs/architecture/route-overrides.md).
+[`../../documentation/architecture/route-overrides.md`](../docs/architecture/route-overrides.md).

@@ -1,0 +1,31 @@
+# Shared defaults imported by every Model City data module via `spring.config.import`.
+# Distributed cache (Valkey over the Redis protocol) and its health indicator.
+modelcity:
+  cache:
+    enabled: ${CACHE_ENABLED:false}
+    default-ttl: ${CACHE_DEFAULT_TTL:30m}
+
+# Observability: every log line carries the application name and the request correlation id
+# (MDC key modelCityCorrelationId, set by CorrelationIdFilter in commons).
+logging:
+  level:
+    com.modelcity: ${LOG_LEVEL:DEBUG}
+  pattern:
+    level: "%5p [${spring.application.name:},%X{modelCityCorrelationId:-}]"
+
+# Valkey speaks the Redis protocol: the connection is handled by Spring Boot's standard auto-config.
+spring:
+  data:
+    redis:
+      host: ${VALKEY_HOST:localhost}
+      port: ${VALKEY_PORT:6379}
+      username: ${VALKEY_USERNAME:}
+      password: ${VALKEY_PASSWORD:}
+      database: ${VALKEY_DATABASE:0}
+      timeout: ${VALKEY_TIMEOUT:2s}
+
+# The Redis health indicator is only active when the cache is enabled (avoids health DOWN without Valkey).
+management:
+  health:
+    redis:
+      enabled: ${CACHE_ENABLED:false}

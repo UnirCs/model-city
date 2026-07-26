@@ -1,0 +1,11 @@
+{
+  "label": "Getting started",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "how-to-start/index"
+  },
+  "customProps": {
+    "description": "Stand up a Model City deployment from scratch: accounts, local services and code scaffolding."
+  }
+}

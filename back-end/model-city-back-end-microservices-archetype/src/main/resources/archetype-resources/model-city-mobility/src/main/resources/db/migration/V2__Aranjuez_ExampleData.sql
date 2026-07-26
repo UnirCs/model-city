@@ -1,0 +1,4 @@
+-- Seed data: model-city-mobility microservice
+-- Context: Aranjuez (Comunidad de Madrid, España)
+-- Safe to re-run: WHERE NOT EXISTS guards each block.
+-- No seed data required at this time.

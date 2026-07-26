@@ -27,7 +27,7 @@ ARG MODULE_MOBILITY=true
 
 ENV MICROSERVICE_ALB_URL=$MICROSERVICE_ALB_URL
 ENV STRIPE_PUBLISHABLE_KEY=$STRIPE_PUBLISHABLE_KEY
-ENV BACKGROUND_IMAGE_URL=$BACKGROUND_IMAGE_URL
+ENV BACKGROUND_IMAGE_URL=${BACKGROUND_IMAGE_URL:-https://www.spain.info/export/sites/segtur/.content/imagenes/rutas/escapada-aranjuez/palacio-real-aranjuez-s1089121742.jpg}
 ENV MODULE_LEISURE=$MODULE_LEISURE
 ENV MODULE_ENGAGEMENT=$MODULE_ENGAGEMENT
 ENV MODULE_MOBILITY=$MODULE_MOBILITY
@@ -49,6 +49,10 @@ ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
+
+# Background image URL exposed at runtime (ECS can override it).
+ARG BACKGROUND_IMAGE_URL
+ENV NEXT_PUBLIC_BACKGROUND_IMAGE_URL=${BACKGROUND_IMAGE_URL:-https://www.spain.info/export/sites/segtur/.content/imagenes/rutas/escapada-aranjuez/palacio-real-aranjuez-s1089121742.jpg}
 
 RUN groupadd --system --gid 1001 nodejs \
   && useradd --system --uid 1001 --gid nodejs nextjs

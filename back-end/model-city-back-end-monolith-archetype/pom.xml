@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.github.unircs</groupId>
+        <artifactId>model-city-starter-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>model-city-back-end-monolith-archetype</artifactId>
+    <packaging>maven-archetype</packaging>
+    <name>model-city-back-end-monolith-archetype</name>
+    <description>
+        Maven archetype that scaffolds a concrete city's monolith deployable from the Model City platform.
+        Generates a single Spring Boot application bundling every vertical (core, engagement, leisure, mobility)
+        and the Auth0 OAuth2 security layer. The boilerplate (persistence adapters, entities, repositories,
+        @SpringBootApplication, topology config and resources) is shipped inside the archetype under
+        src/main/resources/archetype-resources, so generation requires no external reference project.
+        Only city-specific pieces (standalone pom, example override and branding) are templated.
+    </description>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>3.4.1</version>
+            </extension>
+        </extensions>
+
+        <plugins>
+            <!-- Pin to 3.4.1: its bundled Groovy reads Java 25 bytecode. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-archetype-plugin</artifactId>
+                <version>3.4.1</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

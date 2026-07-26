@@ -1,0 +1,10 @@
+# Eureka client defaults imported by the microservice deployables (not the monolith) via `spring.config.import`.
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: ${HOSTNAME:localhost}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}

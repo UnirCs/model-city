@@ -1,0 +1,8 @@
+{
+  "label": "core",
+  "position": 1,
+  "link": {
+    "type": "doc",
+    "id": "back-end/modules/core/index"
+  }
+}

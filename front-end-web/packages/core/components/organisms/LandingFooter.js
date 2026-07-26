@@ -25,7 +25,7 @@ export default function LandingFooter({ t, lang, brand }) {
               {t.footer.poweredBy}
               {' '}
               <a
-                href="https://github.com/modelcity"
+                href="https://github.com/UnirCs/model-city"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"

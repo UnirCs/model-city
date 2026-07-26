@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body style="margin:0;padding:0;background-color:#f4f4f5;font-family:'Public Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased;">
+
+<table style="width:100%;background-color:#f4f4f5;border-collapse:collapse;border-spacing:0;">
+  <tr>
+    <td style="padding:40px 16px;text-align:center;">
+
+      <!-- Card -->
+      <table style="width:100%;max-width:600px;background-color:#ffffff;border-radius:8px;overflow:hidden;border-collapse:collapse;border-spacing:0;margin:0 auto;">
+
+        <!-- Header -->
+        <tr>
+          <td style="padding:32px 48px;border-bottom:1px solid #e4e4e7;">
+            <p style="margin:0;font-size:18px;font-weight:700;color:#002045;letter-spacing:0.01em;">{{CITY_NAME}}</p>
+          </td>
+        </tr>
+
+        <!-- Body -->
+        <tr>
+          <td style="padding:48px;">
+
+            <h1 style="margin:0 0 16px 0;font-size:28px;font-weight:700;color:#002045;line-height:1.3;">Verificación de Identidad</h1>
+            <p style="margin:0 0 40px 0;font-size:16px;color:#52525b;line-height:1.6;">Utiliza el siguiente código para completar la operación que has solicitado en la Sede Electrónica. Por tu seguridad, no compartas este código con nadie.</p>
+
+            <!-- OTP -->
+            <table style="width:100%;border-collapse:collapse;border-spacing:0;margin-bottom:40px;">
+              <tr>
+                <td style="text-align:center;background-color:#f4f4f5;border-radius:8px;padding:40px;border:1px solid #e4e4e7;">
+                  <span style="font-size:28px;font-weight:700;letter-spacing:0.15em;color:#002045;font-family:'Courier New',monospace;">{{OTP_CODE}}</span>
+                </td>
+              </tr>
+            </table>
+
+            <!-- Validity note -->
+            <table style="width:100%;border-collapse:collapse;border-spacing:0;">
+              <tr>
+                <td style="background-color:#f0fdf4;border-radius:6px;border-left:4px solid #13696a;padding:20px 24px;">
+                  <p style="margin:0 0 4px 0;font-size:13px;font-weight:600;color:#13696a;text-transform:uppercase;letter-spacing:0.05em;">Validez del código</p>
+                  <p style="margin:0;font-size:13px;color:#52525b;line-height:1.5;">Este código tiene una validez de 3 minutos. Si no has solicitado este código, puedes ignorar este correo de forma segura.</p>
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="background-color:#002045;padding:32px 48px;">
+            <table style="width:100%;border-collapse:collapse;border-spacing:0;">
+              <tr>
+                <td style="font-size:13px;font-weight:700;color:#ffffff;">{{CITY_NAME}}</td>
+                <td style="text-align:right;">
+                  <a href="#" style="color:rgba(255,255,255,0.7);font-size:12px;text-decoration:underline;margin-left:16px;">Privacidad</a>
+                  <a href="#" style="color:rgba(255,255,255,0.7);font-size:12px;text-decoration:underline;margin-left:16px;">Contacto</a>
+                </td>
+              </tr>
+            </table>
+            <p style="margin:24px 0 0 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;text-align:center;">{{ADDRESS}}<br/>&copy; {{YEAR}} {{CITY_NAME}}. Todos los derechos reservados.</p>
+          </td>
+        </tr>
+
+      </table>
+      <!-- /Card -->
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -26,13 +26,16 @@ const ALB_BASE = process.env.NEXT_PUBLIC_MICROSERVICE_ALB_URL ?? 'https://localh
  * when a valid certificate was presented, plus an opaque verification token
  * that must be forwarded to downstream authorization requests.
  *
+ * This is a `POST` because the backend creates a certificate-verification
+ * resource (it binds the hashed DNI to the account and issues a token).
+ *
  * @param {string} accessToken  – Auth0 Bearer JWT so the gateway can inject X-Auth-Sub.
  * @returns {Promise<{ valid: boolean, verificationToken?: string }>}
  */
 export async function verifyCertificate(accessToken) {
   try {
-    const res  = await fetch(`${ALB_BASE}/api/core/users/certificate/verify`, {
-      method: 'GET',
+    const res  = await fetch(`${ALB_BASE}/api/core/certificate-verifications`, {
+      method: 'POST',
       headers: {
         [CORRELATION_HEADER]: newCorrelationId(),
         ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),

@@ -1,0 +1,83 @@
+server:
+  port: ${PORT:8762}
+        
+## Observability: log pattern with the request correlation id (set by CorrelationIdGlobalFilter).
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{modelCityCorrelationId:-}]"
+
+## Classic Eureka configuration
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: ${HOSTNAME:localhost}
+    
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+      
+
+## Enable service discovery (with Eureka)
+## lower-case-service-id is mandatory, otherwise is retrieved in upper case from Eureka
+spring:
+  application:
+    name: gateway
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Auth0 publica el JWKS en /.well-known/openid-configuration
+          # Spring Security descarga las claves RS256 automáticamente
+          issuer-uri: https://${AUTH0_DOMAIN}/
+  cloud:
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+              # All API traffic arrives at the gateway with an /api/ prefix added by the ALB.
+              # Match /api/{serviceId}/** and strip the prefix before forwarding to the microservice.
+              predicates:
+                - name: Path
+                  args:
+                    pattern: "'/api/' + serviceId + '/**'"
+              filters:
+                - name: RewritePath
+                  args:
+                    regexp: "'/api/' + serviceId + '/(?<remaining>.*)'"
+                    replacement: "'/${remaining}'"
+          default-filters:
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+            - PreserveHostHeader
+          globalcors:
+            cors-configurations:
+              '[/**]': ## For all routes
+                      allowedOrigins: ${ALLOWED_ORIGINS:*} # With '*' we allow all origins. We can restrict by indicating domains or ip + port, e.g. http://localhost:3000 (where our front is, or a Vercel domain)
+                      allowedHeaders: "*" ## All headers allowed
+                      allowedMethods:
+                      - GET
+                      - POST
+                      - PUT
+                      - DELETE
+                      - PATCH
+
+# Auth0 API audience expected in the JWT aud claim.
+auth0:
+  audience: ${AUTH0_AUDIENCE}
+
+## We enable the Actuator API to be able to access <<host>>/actuator/gateway/routes
+## We expose the routings that have been automatically detected (all)
+## Depending on the ROUTE_TABLES_ENABLED environment variable (true by default)
+management:
+  endpoint:
+    gateway:
+      access: ${ROUTE_TABLES_ENABLED:read_only}
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'

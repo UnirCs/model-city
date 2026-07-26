@@ -1,0 +1,9 @@
+{
+  "label": "Examples",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Back-end extensibility examples",
+    "description": "One worked recipe per kind of city customisation — adding fields to the data model, overriding and adding use cases, controllers, endpoints, persistence adapters, a whole new entity, and tuning the YAML configuration (including disabling the cache for a single use case)."
+  }
+}

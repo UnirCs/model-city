@@ -26,8 +26,11 @@ Options:
   MapLibre) the platform is built against.
 - `modules.config.mjs` — the city's declaration of contracted modules.
 - Project wiring derived from the platform's reference app at publish time
-  (`next.config.mjs`, `jsconfig.json` with the overrides fallback, Tailwind v4
-  setup, Dockerfile, `.env.example`).
+  (via `sync-template.mjs`): `next.config.mjs`, `postcss.config.mjs`
+  (Tailwind v4), `eslint.config.mjs`, `jsconfig.json` with the overrides
+  fallback, `public/` and `.gitignore`.
+- Static wiring maintained in the archetype itself (not derived from the
+  reference app): `Dockerfile`, `.dockerignore` and `.env.example`.
 - An empty `overrides/` directory documenting the extension mechanism.
 
 ## Links

@@ -214,7 +214,7 @@ export async function createAgent(payload, accessToken) {
  */
 export async function setUserStatus(id, status, accessToken) {
   try {
-    const res = await serverFetch(`${BASE}/users/${encodeURIComponent(id)}/status`, {
+    const res = await serverFetch(`${BASE}/users/${encodeURIComponent(id)}`, {
       method: 'PATCH',
       headers: {
         Authorization: `Bearer ${accessToken}`,

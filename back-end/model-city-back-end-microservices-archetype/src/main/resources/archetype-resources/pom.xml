@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Standalone city deployable (microservices topology): an aggregator that builds the Eureka registry,
+         the gateway and one Spring Boot app per vertical, all depending on the published Model City platform
+         libraries. Regenerate with the archetype to pick up platform changes; customise by adding override
+         beans under com.modelcity.<vertical> in the relevant vertical module. -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.0.6</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
+    <packaging>pom</packaging>
+    <name>${artifactId}</name>
+    <description>${cityName} — Model City microservices deployable</description>
+
+    <modules>
+        <module>model-city-service-registry</module>
+        <module>model-city-gateway</module>
+        <module>model-city-core</module>
+        <module>model-city-engagement</module>
+        <module>model-city-leisure</module>
+        <module>model-city-mobility</module>
+    </modules>
+
+    <properties>
+        <java.version>25</java.version>
+        <spring-cloud.version>2025.1.1</spring-cloud.version>
+        <modelcity.version>${modelcityVersion}</modelcity.version>
+        <stripe.version>24.14.0</stripe.version>
+        <json-patch.version>1.13</json-patch.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.stripe</groupId>
+                <artifactId>stripe-java</artifactId>
+                <version>${stripe.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.java-json-tools</groupId>
+                <artifactId>json-patch</artifactId>
+                <version>${json-patch.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <excludes>
+                            <exclude>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                            </exclude>
+                        </excludes>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

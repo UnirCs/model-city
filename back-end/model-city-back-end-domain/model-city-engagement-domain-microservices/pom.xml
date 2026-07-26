@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.github.unircs</groupId>
+        <artifactId>model-city-starter-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>model-city-engagement-domain-microservices</artifactId>
+    <name>model-city-engagement-domain-microservices</name>
+    <description>Phase-4 topology-specific persistence for the engagement vertical (concrete
+        SecurityAlert, CivicQuestion, Objective, Answer and EngagementTrail entities, repositories and
+        upstream Default*Store adapters — soft references only, no core-domain FKs). Pairs with the invariant
+        @MappedSuperclass *Base classes in model-city-engagement-domain.</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.unircs</groupId>
+            <artifactId>model-city-engagement-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+    </dependencies>
+</project>

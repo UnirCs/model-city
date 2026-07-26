@@ -1,0 +1,9 @@
+{
+  "label": "Examples",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Extensibility examples",
+    "description": "One copy-ready recipe per kind of city customisation — components, screens, server actions, API clients, the proxy, globals.css, i18n, navigation, roles, config and more."
+  }
+}
