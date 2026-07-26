@@ -1,6 +1,6 @@
 {
   "name": "create-model-city-app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Scaffold a Model City front-end city project: a Next.js app consuming the @modelcity/* platform packages, with build-time module selection and per-city overrides.",
   "license": "MIT",
   "type": "module",
