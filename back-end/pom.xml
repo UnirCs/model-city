@@ -8,7 +8,7 @@
   </parent>
   <groupId>io.github.unircs</groupId>
   <artifactId>model-city-starter-parent</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
   <name>model-city-starter-parent</name>
   <description>Model City — an extensible smart-city back-end platform for municipalities</description>
@@ -43,6 +43,7 @@
     <java.version>25</java.version>
     <spring-cloud.version>2025.1.1</spring-cloud.version>
     <archunit.version>1.4.1</archunit.version>
+    <central.autoPublish>false</central.autoPublish>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -236,6 +237,9 @@
                   <goal>sign</goal>
                 </goals>
                 <configuration>
+                  <!-- Reads the passphrase from a <server> entry in settings.xml
+                       (id "gpg.passphrase") instead of prompting on a TTY. -->
+                  <passphraseServerId>gpg.passphrase</passphraseServerId>
                   <!-- Required for GPG >= 2.1 so signing works without a TTY prompt -->
                   <gpgArguments>
                     <arg>--pinentry-mode</arg>
@@ -251,7 +255,7 @@
             <extensions>true</extensions>
             <configuration>
               <publishingServerId>central</publishingServerId>
-              <autoPublish>true</autoPublish>
+              <autoPublish>${central.autoPublish}</autoPublish>
               <waitUntil>published</waitUntil>
             </configuration>
           </plugin>

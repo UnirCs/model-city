@@ -8,11 +8,14 @@
     <parent>
         <groupId>io.github.unircs</groupId>
         <artifactId>model-city-starter-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>model-city-commons</artifactId>
+    <name>model-city-commons</name>
+    <description>Shared infrastructure and cross-cutting concerns (extensibility, error handling, i18n,
+        caching, security, pagination) reused across every vertical domain module.</description>
 
     <dependencies>
         <dependency>
