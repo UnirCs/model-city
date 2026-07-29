@@ -52,3 +52,24 @@ The feature verticals are:
   extensibility, observability and i18n.
 - **[Infrastructure](./infrastructure/)** — the Terraform stacks and the deploy
   workflow on AWS.
+
+## Audiovisual walkthrough
+
+There is an audiovisual walkthrough of the platform made up of **8 videos**,
+each covering one topic. Scan the QR code for the topic you're interested in to
+watch it
+
+1. Introduction, repository and documentation
+2. Signing in to Model City
+3. Platform overview
+4. Leisure in Model City
+5. Tourism in Model City
+6. Citizen participation and alerts in Model City
+7. Mobility in Model City
+8. Model City administration
+
+:::note
+The videos are currently only available in **Spanish**.
+:::
+
+![Model City audiovisual walkthrough](/img/audiovisual.png)
