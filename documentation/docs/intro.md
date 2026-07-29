@@ -3,6 +3,11 @@ slug: /
 title: Model City platform
 sidebar_label: Overview
 sidebar_position: 1
+description: >-
+  Model City is a full-stack platform for building a city's digital services:
+  a Next.js front-end, a Spring Boot back-end (microservices or monolith) and
+  Terraform/AWS infrastructure, scaffolded from published archetypes and
+  customised through well-defined extension points.
 ---
 
 # Model City

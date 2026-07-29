@@ -67,7 +67,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/social-card.png',
       colorMode: {
         respectPrefersColorScheme: true,
       },
@@ -78,7 +78,7 @@ const config = {
         title: 'Model City',
         logo: {
           alt: 'Model City Logo',
-          src: 'img/logo.svg',
+          src: 'img/LogoModelCity.png',
         },
         items: [
           {
@@ -116,7 +116,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Model City. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Model City.`,
       },
       prism: {
         theme: prismThemes.github,
