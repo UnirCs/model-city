@@ -172,6 +172,7 @@ resource "aws_ecs_task_definition" "frontend" {
       { name = "STRIPE_PARKING_PRODUCT_ID", value = var.stripe_parking_product_id },
       # Gemini server-side API key.
       { name = "GEMINI_API_KEY", value = var.gemini_api_key },
+      { name = "GEMINI_MODEL", value = var.gemini_model },
     ]
     logConfiguration = {
       logDriver = "awslogs"

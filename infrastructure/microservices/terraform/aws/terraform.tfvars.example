@@ -35,6 +35,7 @@ stripe_webhook_secret_mobility = ""
 stripe_parking_product_id      = ""
 nextauth_secret          = ""
 gemini_api_key           = ""
+gemini_model             = ""
 
 # --- Auth0 role IDs & certificate secrets (needed for back-office invites and certificate flows) ---
 auth0_backoffice_role_id     = ""

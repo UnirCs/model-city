@@ -267,6 +267,13 @@ variable "gemini_api_key" {
   sensitive   = true
 }
 
+# Gemini model id — falls back to the frontend's built-in default when empty.
+variable "gemini_model" {
+  description = "Google Gemini model id for server-side AI features in the Next.js frontend."
+  type        = string
+  default     = ""
+}
+
 # ElastiCache
 variable "create_elasticache" {
   description = "Create ElastiCache Valkey replication group. Set to false if unavailable in the Academy session."
