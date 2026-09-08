@@ -18,6 +18,14 @@ There are two kinds of task here:
    artifacts (Maven archetypes for the back-end, `create-model-city-app` for the
    front-end).
 
+:::tip[Prefer an AI assistant?]
+
+All of the steps below can be run interactively by Claude Code using the
+[AI-assisted setup](./ai-assisted-setup.md) skill instead of following each guide by
+hand.
+
+:::
+
 ## Suggested order
 
 | # | Guide | What you get |
