@@ -29,6 +29,20 @@ outlines the fastest way to obtain a certificate for the sample domain
    ```bash
    sudo certbot certonly --manual --preferred-challenges dns -d model-city.example.org
    ```
+   :::note
+   Let's Encrypt retired the classic `ISRG Root X1`-anchored alternate chain on
+   2026-08-18 (the "Generation Y" rollout) — `--preferred-chain "ISRG Root X1"`
+   no longer matches anything, so don't bother passing it. The default chain
+   (`... → Root YE → ISRG Root X2`) has validated fine in testing, including
+   from inside a plain `node:20-slim` container calling the ALB over the public
+   domain. If a future renewal ever serves a chain that a client inside your
+   Docker images can't validate (`unable to verify the first certificate`,
+   silently swallowed by the API clients if it's the frontend calling the
+   backend), that's a CA-side trust-store propagation issue, not something
+   fixed by a `--preferred-chain` flag — check the
+   [Let's Encrypt community forum](https://community.letsencrypt.org) for the
+   current state of Generation Y root trust before chasing it further.
+   :::
 3. Add the `_acme-challenge.model-city.example.org` TXT record your DNS
    provider asks for, wait for propagation, then press Enter.
 4. The certificate and private key are written to
@@ -182,6 +196,11 @@ renew and re-import:
 sudo certbot renew
 ./import-cert-to-acm.sh
 ```
+
+Then update `acm_certificate_arn` in `terraform.tfvars` with the new ARN and run
+`terraform apply` so the ALB picks it up. For production workloads, consider a
+managed ACM certificate or an automated renewal pipeline instead of the manual
+script.
 
 Then update `acm_certificate_arn` in `terraform.tfvars` with the new ARN and run
 `terraform apply` so the ALB picks it up. For production workloads, consider a
