@@ -62,7 +62,7 @@ output "frontend_project_dir" {
 }
 
 output "truststore_s3_bucket" {
-  value = aws_s3_bucket.truststore.id
+  value = data.aws_s3_bucket.truststore.id
 }
 
 output "private_subnet_ids" {

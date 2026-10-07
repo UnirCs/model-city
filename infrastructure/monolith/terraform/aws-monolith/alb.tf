@@ -1,16 +1,17 @@
 # S3 bucket that stores the CA bundle used by the ALB TrustStore for mTLS.
-resource "aws_s3_bucket" "truststore" {
-  bucket        = "${local.name}-mtls-truststore-${random_id.bucket_suffix.hex}"
-  force_destroy = true
-  tags          = { Name = "${local.name}-mtls-truststore" }
-}
+#
+# This MUST stay a data source, not a resource: the aws_s3_bucket resource's
+# Read unconditionally calls s3:GetBucketObjectLockConfiguration, and AWS
+# Academy's SCP denies that action. The bucket is created out-of-band by the
+# deploy script (ensure_truststore_bucket) before `terraform apply` runs.
+data "aws_caller_identity" "current" {}
 
-resource "random_id" "bucket_suffix" {
-  byte_length = 4
+data "aws_s3_bucket" "truststore" {
+  bucket = "${local.name}-mtls-truststore-${data.aws_caller_identity.current.account_id}"
 }
 
 resource "aws_s3_bucket_public_access_block" "truststore" {
-  bucket                  = aws_s3_bucket.truststore.id
+  bucket                  = data.aws_s3_bucket.truststore.id
   block_public_acls       = true
   block_public_policy     = true
   ignore_public_acls      = true
@@ -18,7 +19,7 @@ resource "aws_s3_bucket_public_access_block" "truststore" {
 }
 
 resource "aws_s3_object" "fnmt_bundle" {
-  bucket = aws_s3_bucket.truststore.id
+  bucket = data.aws_s3_bucket.truststore.id
   key    = "fnmt-client-trust-bundle.pem"
   source = var.mtls_trust_bundle_path
   etag   = filemd5(var.mtls_trust_bundle_path)
@@ -26,7 +27,7 @@ resource "aws_s3_object" "fnmt_bundle" {
 
 resource "aws_lb_trust_store" "fnmt" {
   name                             = "${local.name}-fnmt"
-  ca_certificates_bundle_s3_bucket = aws_s3_bucket.truststore.id
+  ca_certificates_bundle_s3_bucket = data.aws_s3_bucket.truststore.id
   ca_certificates_bundle_s3_key    = aws_s3_object.fnmt_bundle.key
   tags                             = { Name = "${local.name}-fnmt-truststore" }
 }

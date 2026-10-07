@@ -97,6 +97,16 @@ check_aws_credentials() {
   log_success "AWS authenticated (Account: $account)"
 }
 
+check_docker_running() {
+  log_info "Checking Docker daemon..."
+
+  if ! docker info &> /dev/null; then
+    die "Docker daemon is not running or not reachable. Start Docker Desktop and try again."
+  fi
+
+  log_success "Docker daemon is running"
+}
+
 check_ecr_access() {
   log_info "Checking ECR access..."
 
@@ -231,7 +241,35 @@ DOCKERFILE
 # TERRAFORM
 # ============================================================================
 
+# The mTLS truststore bucket is created here (not by Terraform) because the
+# AWS Academy SCP denies s3:GetBucketObjectLockConfiguration, which the
+# aws_s3_bucket resource's Read always calls. Terraform instead reads this
+# bucket via a data source — see terraform/*/alb.tf.
+ensure_truststore_bucket() {
+  local account_id bucket
+  account_id=$(aws sts get-caller-identity --query Account --output text)
+  bucket="modelcity-academy-mtls-truststore-${account_id}"
+
+  if aws s3api head-bucket --bucket "$bucket" --region "$AWS_REGION" 2>/dev/null; then
+    log_info "mTLS truststore bucket already exists: $bucket"
+    return
+  fi
+
+  log_info "Creating mTLS truststore bucket: $bucket"
+  if [[ "$AWS_REGION" == "us-east-1" ]]; then
+    aws s3api create-bucket --bucket "$bucket" --region "$AWS_REGION" > /dev/null \
+      || die "Failed to create truststore bucket: $bucket"
+  else
+    aws s3api create-bucket --bucket "$bucket" --region "$AWS_REGION" \
+      --create-bucket-configuration LocationConstraint="$AWS_REGION" > /dev/null \
+      || die "Failed to create truststore bucket: $bucket"
+  fi
+  log_success "Created $bucket"
+}
+
 terraform_apply() {
+  ensure_truststore_bucket
+
   log_info "Initializing and applying Terraform..."
 
   cd "$TERRAFORM_DIR"
@@ -273,6 +311,7 @@ terraform_destroy() {
 
     if terraform destroy -auto-approve; then
       log_success "All resources destroyed"
+      delete_truststore_bucket
       return
     fi
 
@@ -283,6 +322,23 @@ terraform_destroy() {
   done
 
   die "Terraform destroy failed after $max_attempts attempts. Run 'terraform destroy' manually or check the AWS Console for remaining resources."
+}
+
+# The truststore bucket is not Terraform-managed (see ensure_truststore_bucket),
+# so `terraform destroy` doesn't remove it — clean it up here instead.
+delete_truststore_bucket() {
+  local account_id bucket
+  account_id=$(aws sts get-caller-identity --query Account --output text)
+  bucket="modelcity-academy-mtls-truststore-${account_id}"
+
+  if ! aws s3api head-bucket --bucket "$bucket" --region "$AWS_REGION" 2>/dev/null; then
+    return
+  fi
+
+  log_info "Removing mTLS truststore bucket: $bucket"
+  aws s3 rm "s3://$bucket" --recursive --region "$AWS_REGION" > /dev/null 2>&1 || true
+  aws s3api delete-bucket --bucket "$bucket" --region "$AWS_REGION" > /dev/null 2>&1 \
+    || log_warn "Failed to delete truststore bucket: $bucket (remove it manually if needed)"
 }
 
 # ============================================================================
@@ -596,6 +652,7 @@ initial_deployment() {
 
   check_prerequisites
   check_aws_credentials
+  check_docker_running
 
   echo
   log_info "Step 1/4: Terraform provisioning"
@@ -625,6 +682,7 @@ redeploy_services() {
 
   check_prerequisites
   check_aws_credentials
+  check_docker_running
 
   echo "Available services:"
   echo "  1) service-registry"
@@ -715,6 +773,7 @@ update_config() {
 
   check_prerequisites
   check_aws_credentials
+  ensure_truststore_bucket
 
   cd "$TERRAFORM_DIR"
 
